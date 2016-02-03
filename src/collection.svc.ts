@@ -15,8 +15,8 @@ export class CollectionService {
 	 * @param {ISelectable} selectItem item to select.
 	 */
 	mutualExclusiveSelect(collection: ISelectable[], selectItem: ISelectable): void {
-		
-		_.forEach(collection, x => {
+
+		_.forEach(collection, (x: ISelectable) => {
 			x.isSelected = false;
 		});
 
