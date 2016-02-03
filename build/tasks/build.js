@@ -31,7 +31,7 @@ gulp.task("compile:ts", () => {
 
 	return tsResult.js
 		.pipe(sourcemaps.write("."))
-		.pipe(gulp.dest(`${paths.output.dist}`))
+		.pipe(gulp.dest(`${paths.output.artifact}`))
 });
 
 function getTscProject() {
