@@ -1,0 +1,24 @@
+{
+	"name": "ssv-core",
+	"version": "0.1.0",
+	"description": "core functions and utils",
+	"keywords": [
+		"sketch7",
+		"core",
+		"utils"
+	],
+	"author": "Stephen Lautier <stephen.lautier@outlook.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"del": "^2.2.0",
+		"gulp": "^3.9.0",
+		"gulp-plumber": "^1.0.1",
+		"gulp-sourcemaps": "^1.6.0",
+		"gulp-typescript": "^2.10.0",
+		"gulp-util": "^3.0.7",
+		"require-dir": "^0.3.0",
+		"run-sequence": "^1.1.5",
+		"typescript": "^1.7.5"
+	},
+	"dependencies": {}
+}
