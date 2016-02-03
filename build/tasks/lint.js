@@ -5,7 +5,6 @@ const stylish = require("gulp-tslint-stylish");
 const paths = require("../paths");
 
 gulp.task("lint", () => {
-
 	gulp.src(paths.src.ts)
 		.pipe(tslint())
 		.pipe(tslint.report(stylish, {
@@ -14,4 +13,4 @@ gulp.task("lint", () => {
 			bell: true,
 			fullPath: true
 		}))
-})
+});

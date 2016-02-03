@@ -1,6 +1,6 @@
 {
   "name": "ssv-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -25,6 +25,7 @@
     "gulp-tslint-stylish": "^1.1.1",
     "gulp-typescript": "^2.10.0",
     "gulp-util": "^3.0.7",
+    "merge2": "^1.0.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
     "tslint": "^3.3.0",

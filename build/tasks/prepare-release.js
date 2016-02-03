@@ -29,7 +29,7 @@ gulp.task("prepare-release", (cb) => {
 		"lint",
 		"rebuild",
 	//"test",
-	//"copy-dist",
+		"copy-dist",
 		"bump-version",
 	//"doc",
 		"changelog",
