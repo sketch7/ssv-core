@@ -9,7 +9,7 @@ gulp.task("lint", () => {
 	gulp.src(paths.src.ts)
 		.pipe(tslint())
 		.pipe(tslint.report(stylish, {
-			emitError: false,
+			emitError: true,
 			sort: true,
 			bell: true,
 			fullPath: true
