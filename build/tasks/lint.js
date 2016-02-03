@@ -1,10 +1,11 @@
-var gulp = require("gulp");
-var tslint = require("gulp-tslint");
-var stylish = require("gulp-tslint-stylish");
+const gulp = require("gulp");
+const tslint = require("gulp-tslint");
+const stylish = require("gulp-tslint-stylish");
 
-var paths = require("../paths");
+const paths = require("../paths");
 
 gulp.task("lint", () => {
+
 	gulp.src(paths.src.ts)
 		.pipe(tslint())
 		.pipe(tslint.report(stylish, {

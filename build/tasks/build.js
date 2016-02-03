@@ -1,15 +1,14 @@
-var gulp = require("gulp");
-var runSeq = require("run-sequence");
-var typescript = require("typescript");
-var tsc = require("gulp-typescript");
-var sourcemaps = require("gulp-sourcemaps");
-var plumber = require("gulp-plumber");
+const gulp = require("gulp");
+const runSeq = require("run-sequence");
+const tsc = require("gulp-typescript");
+const sourcemaps = require("gulp-sourcemaps");
+const plumber = require("gulp-plumber");
 
-var paths = require("../paths");
+const paths = require("../paths");
 
 gulp.task("build", (cb) => {
 	return runSeq(
-		["compile:ts", "compile:sass", "html", "copy:imgs"],
+		["compile:ts"],
 		cb);
 });
 
@@ -22,8 +21,8 @@ gulp.task("rebuild", (cb) => {
 
 // scripts
 gulp.task("compile:ts", () => {
-	var tsProject = getTscProject();
-	var tsResult = gulp.src([paths.src.tsd, paths.src.ts])
+	const tsProject = getTscProject();
+	const tsResult = gulp.src([paths.src.tsd, paths.src.ts])
 		.pipe(plumber())
 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())
@@ -36,7 +35,6 @@ gulp.task("compile:ts", () => {
 
 function getTscProject() {
 	return tsc.createProject("tsconfig.json", {
-		sortOutput: true,
-		typescript: typescript
+		typescript: require("typescript")
 	});
 }

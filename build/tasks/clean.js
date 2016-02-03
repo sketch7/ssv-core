@@ -1,8 +1,8 @@
-var gulp = require("gulp");
-var del = require("del");
+const gulp = require("gulp");
+const del = require("del");
 
-var paths = require("../paths");
+const paths = require("../paths");
 
 gulp.task("clean", () => {
-	return del(paths.output.dist)
+	return del(paths.output.artifact)
 });
