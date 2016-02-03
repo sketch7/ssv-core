@@ -1,39 +1,42 @@
 {
-	"name": "ssv-core",
-	"version": "0.1.0",
-	"description": "ssv core components, utilities and services",
-	"keywords": [
-		"sketch7",
-		"core",
-		"utils"
-	],
-	"author": "Stephen Lautier <stephen.lautier@outlook.com>",
-	"license": "ISC",
-	"main": "dist/amd/index.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/sketch7/ssv-core"
-	},
-	"devDependencies": {
-		"del": "^2.2.0",
-		"gulp": "^3.9.0",
-		"gulp-plumber": "^1.0.1",
-		"gulp-sourcemaps": "^1.6.0",
-		"gulp-typescript": "^2.10.0",
-		"gulp-util": "^3.0.7",
-		"require-dir": "^0.3.0",
-		"run-sequence": "^1.1.5",
-		"typescript": "^1.7.5"
-	},
-	"dependencies": {},
-	"jspm": {
-		"registry": "npm",
-		"jspmPackage": true,
-		"main": "index",
-		"format": "amd",
-		"directories": {
-			"dist": "dist/amd"
-		},
-		"peerDependencies": {}
-	}
+  "name": "ssv-core",
+  "version": "0.1.0",
+  "description": "ssv core components, utilities and services",
+  "keywords": [
+    "sketch7",
+    "core",
+    "utils"
+  ],
+  "author": "Stephen Lautier <stephen.lautier@outlook.com>",
+  "license": "ISC",
+  "main": "dist/amd/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sketch7/ssv-core"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^4.3.1",
+    "gulp-tslint-stylish": "^1.1.1",
+    "gulp-typescript": "^2.10.0",
+    "gulp-util": "^3.0.7",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "tslint": "^3.3.0",
+    "typescript": "^1.7.5"
+  },
+  "dependencies": {},
+  "jspm": {
+    "registry": "npm",
+    "jspmPackage": true,
+    "main": "index",
+    "format": "amd",
+    "directories": {
+      "dist": "dist/amd"
+    },
+    "peerDependencies": {}
+  }
 }
