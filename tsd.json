@@ -1,0 +1,21 @@
+{
+	"version": "v4",
+	"repo": "borisyankov/DefinitelyTyped",
+	"ref": "master",
+	"path": "tools/typings",
+	"bundle": "tools/typings/tsd.d.ts",
+	"installed": {
+		"lodash/lodash.d.ts": {
+			"commit": "e69fe60f2d6377ea4fae539493997b098f52cad1"
+		},
+		"jasmine-es6-promise-matchers/jasmine-es6-promise-matchers.d.ts": {
+			"commit": "e69fe60f2d6377ea4fae539493997b098f52cad1"
+		},
+		"jasmine/jasmine.d.ts": {
+			"commit": "e69fe60f2d6377ea4fae539493997b098f52cad1"
+		},
+		"jquery/jquery.d.ts": {
+			"commit": "e69fe60f2d6377ea4fae539493997b098f52cad1"
+		}
+	}
+}

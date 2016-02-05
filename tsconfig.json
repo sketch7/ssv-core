@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"module": "amd",
+		"target": "es5",
+		"noEmit": false,
+		"noEmitOnError": false,
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"declaration": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"exclude": [
+		"node_modules",
+		"wwwroot"
+	]
+}
