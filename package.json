@@ -1,6 +1,6 @@
 {
   "name": "ssv-core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -36,14 +36,17 @@
   "jspm": {
     "registry": "npm",
     "jspmPackage": true,
-    "main": "ssv-core",
+    "main": "amd/ssv-core",
     "format": "amd",
     "directories": {
-      "dist": "dist/amd"
+      "dist": "dist"
     },
 	"dependencies": {
 		"lodash": "^4.0.0"
 	},
     "peerDependencies": {}
+  },
+  "typescript": {
+	  "definition": "dist/ssv-core.d.ts"
   }
 }
