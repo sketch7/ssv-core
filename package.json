@@ -36,11 +36,14 @@
   "jspm": {
     "registry": "npm",
     "jspmPackage": true,
-    "main": "index",
+    "main": "ssv-core",
     "format": "amd",
     "directories": {
       "dist": "dist/amd"
     },
+	"dependencies": {
+		"lodash": "^4.0.0"
+	},
     "peerDependencies": {}
   }
 }
