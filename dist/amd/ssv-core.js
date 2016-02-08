@@ -54,25 +54,6 @@ define("enum.svc", ["require", "exports", "lodash"], function (require, exports,
 define("keycode", ["require", "exports"], function (require, exports) {
     "use strict";
 });
-define("string.svc", ["require", "exports"], function (require, exports) {
-    "use strict";
-    var StringService = (function () {
-        function StringService() {
-        }
-        StringService.prototype.interpolateUrl = function (url, data) {
-            data = data || {};
-            var interpolatedUrl = url.replace(/(\(\s*|\s*\)|\s*\|\s*)/g, "");
-            for (var property in data) {
-                if (data.hasOwnProperty(property)) {
-                    interpolatedUrl = interpolatedUrl.replace(":" + property, data[property]);
-                }
-            }
-            return interpolatedUrl;
-        };
-        return StringService;
-    }());
-    exports.StringService = StringService;
-});
 define("math.svc", ["require", "exports"], function (require, exports) {
     "use strict";
     var MathService = (function () {
@@ -85,19 +66,53 @@ define("math.svc", ["require", "exports"], function (require, exports) {
     }());
     exports.MathService = MathService;
 });
-define("index", ["require", "exports", "string.svc", "math.svc", "enum.svc", "collection.svc"], function (require, exports, string_svc_1, math_svc_1, enum_svc_1, collection_svc_1) {
+define("string.svc", ["require", "exports"], function (require, exports) {
+    "use strict";
+    var StringService = (function () {
+        function StringService() {
+        }
+        StringService.prototype.interpolate = function (value, data, interpolatePrefix) {
+            if (interpolatePrefix === void 0) { interpolatePrefix = ":"; }
+            data = data || {};
+            var interpolatedUrl = value.replace(/(\(\s*|\s*\)|\s*\|\s*)/g, "");
+            for (var property in data) {
+                if (data.hasOwnProperty(property)) {
+                    interpolatedUrl = interpolatedUrl.replace("" + interpolatePrefix + property, data[property]);
+                }
+            }
+            return interpolatedUrl;
+        };
+        return StringService;
+    }());
+    exports.StringService = StringService;
+});
+define("utils.svc", ["require", "exports", "math.svc", "string.svc", "collection.svc", "enum.svc"], function (require, exports, math_svc_1, string_svc_1, collection_svc_1, enum_svc_1) {
     "use strict";
     var Utils = (function () {
         function Utils() {
-            this.string = new string_svc_1.StringService();
             this.math = new math_svc_1.MathService();
-            this.enums = new enum_svc_1.EnumService();
+            this.string = new string_svc_1.StringService();
             this.collection = new collection_svc_1.CollectionService();
+            this.enum = new enum_svc_1.EnumService();
         }
         return Utils;
     }());
     exports.Utils = Utils;
     exports.utils = new Utils();
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = exports.utils;
+});
+define("ssv-core", ["require", "exports", "collection.svc", "enum.svc", "keycode", "math.svc", "string.svc", "utils.svc"], function (require, exports, collection_svc_2, enum_svc_2, keycode_1, math_svc_2, string_svc_2, utils_svc_1) {
+    "use strict";
+    function __export(m) {
+        for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    }
+    __export(collection_svc_2);
+    __export(enum_svc_2);
+    __export(keycode_1);
+    __export(math_svc_2);
+    __export(string_svc_2);
+    __export(utils_svc_1);
 });
 
 //# sourceMappingURL=ssv-core.js.map

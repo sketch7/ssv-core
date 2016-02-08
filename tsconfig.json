@@ -17,6 +17,8 @@
 	"exclude": [
 		"node_modules",
 		"wwwroot",
-		"dist"
+		"dist",
+		"typings/main.d.ts",
+		"typings/main"
 	]
 }

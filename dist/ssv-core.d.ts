@@ -38,9 +38,9 @@ declare module "enum.svc" {
 }
 declare module "keycode" {
     /**
-     * Keyboard key codes.
-     * @see http://www.javascripter.net/faq/keycodes.htm
-     */
+    * Keyboard key codes.
+    * @see http://www.javascripter.net/faq/keycodes.htm
+    */
     export const enum KeyCode {
         Backspace = 8,
         Tab = 9,
@@ -143,28 +143,35 @@ declare module "keycode" {
         SingleQuote = 222,
     }
 }
-declare module "string.svc" {
-    export class StringService {
-        interpolateUrl(url: string, data: any): string;
-    }
-}
 declare module "math.svc" {
     export class MathService {
         add(value: number, valueB: number): number;
     }
 }
-declare module "index" {
-    export { ISelectable } from "collection.svc";
-    export { KeyCode } from "keycode";
-    import { StringService } from "string.svc";
-    import { MathService } from "math.svc";
-    import { EnumService } from "enum.svc";
-    import { CollectionService } from "collection.svc";
-    export class Utils {
-        string: StringService;
-        math: MathService;
-        enums: EnumService;
-        collection: CollectionService;
+declare module "string.svc" {
+    export class StringService {
+        interpolate(value: string, data: any, interpolatePrefix?: string): string;
     }
-    export var utils: Utils;
+}
+declare module "utils.svc" {
+    import { MathService } from "math.svc";
+    import { StringService } from "string.svc";
+    import { CollectionService } from "collection.svc";
+    import { EnumService } from "enum.svc";
+    export class Utils {
+        math: MathService;
+        string: StringService;
+        collection: CollectionService;
+        enum: EnumService;
+    }
+    export let utils: Utils;
+    export default utils;
+}
+declare module "ssv-core" {
+    export * from "collection.svc";
+    export * from "enum.svc";
+    export * from "keycode";
+    export * from "math.svc";
+    export * from "string.svc";
+    export * from "utils.svc";
 }

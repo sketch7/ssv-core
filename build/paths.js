@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
 const srcRoot = "src";
-const tsdMainFile = "tools/typings/tsd.d.ts";
+const tsdMainFile = "typings/browser.d.ts";
 
 
 module.exports = {
