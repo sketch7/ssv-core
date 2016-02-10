@@ -8,10 +8,6 @@ describe("CollectionServiceSpec", () => {
 
 	let collectionService = new CollectionService();
 
-	beforeEach(() => {
-		
-	});
-
 	describe("mutualExclusiveSelectSpec", () => {
 		let mockSelectableCollection: ISelectableMock[];
 		beforeEach(() => {

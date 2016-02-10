@@ -12,5 +12,5 @@ gulp.task("lint", () => {
 			sort: true,
 			bell: true,
 			fullPath: true
-		}))
+		}));
 });

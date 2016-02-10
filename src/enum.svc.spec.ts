@@ -12,9 +12,6 @@ describe("EnumService", () => {
 
 	let enumService = new EnumService();
 
-	beforeEach(() => {
-	});
-
 	describe("getNames", () => {
 
 		it("should return enum names as array.", () => {

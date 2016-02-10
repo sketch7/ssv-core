@@ -4,10 +4,6 @@ describe("StringService", () => {
 
 	let stringService = new StringService();
 
-	beforeEach(() => {
-
-	});
-
 	describe("interpolate", () => {
 
 		describe("given default prefix (:)", () => {
