@@ -9,6 +9,7 @@ install:
   - npm install -g gulp
   # install modules
   - npm install
+  - jspm install
   
 # Post-install test scripts.
 test_script:
