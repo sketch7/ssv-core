@@ -18,6 +18,7 @@ test_script:
   # run tests
   #- npm test
   - gulp lint
+  - gulp test
 
 # Don't actually build.
 build: off

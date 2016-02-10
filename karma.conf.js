@@ -4,7 +4,7 @@ module.exports = function (config) {
 		frameworks: ["systemjs", "jasmine"],
 		
 		systemjs: {
-			//configFile: "config.js",
+			configFile: "system.config.js",
 			config: {
 				paths: {
 					"*": "*",
