@@ -29,6 +29,7 @@
     "jasmine-core": "^2.4.1",
     "jspm": "^0.16.27",
     "karma": "^0.13.19",
+    "karma-appveyor-reporter": "^0.3.0",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.7",
     "karma-mocha-reporter": "^1.1.5",
