@@ -6,8 +6,9 @@
     "**/**-min.**",
     "**/**.min.**",
     "bower_components/**",
-	"**/dist/**,
-	"**/_artifact/**,
+	"dist/**,
+	"_artifact/**,
+	"typings/**"
   ],
   "test": [
     "**/test/**",
