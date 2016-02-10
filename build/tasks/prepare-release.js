@@ -28,7 +28,7 @@ gulp.task("prepare-release", (cb) => {
 	return runSequence(
 		"lint",
 		"rebuild",
-	//"test",
+		"test",
 		"copy-dist",
 		"bump-version",
 	//"doc",

@@ -17,6 +17,7 @@
   "devDependencies": {
     "conventional-changelog": "^0.5.3",
     "del": "^2.2.0",
+    "es6-module-loader": "^0.17.10",
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",
     "gulp-plumber": "^1.0.1",
@@ -25,9 +26,16 @@
     "gulp-tslint-stylish": "^1.1.1",
     "gulp-typescript": "^2.10.0",
     "gulp-util": "^3.0.7",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7",
+    "karma-mocha-reporter": "^1.1.5",
+    "karma-systemjs": "^0.11.0",
     "merge2": "^1.0.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
+    "systemjs": "^0.19.20",
     "tslint": "^3.3.0",
     "typescript": "^1.7.5",
     "yargs": "^3.32.0"
@@ -40,12 +48,12 @@
     "directories": {
       "dist": "dist"
     },
-	"dependencies": {
-		"lodash": "^4.0.0"
-	},
+    "dependencies": {
+      "lodash": "^4.0.0"
+    },
     "peerDependencies": {}
   },
   "typescript": {
-	  "definition": "dist/ssv-core.d.ts"
+    "definition": "dist/ssv-core.d.ts"
   }
 }
