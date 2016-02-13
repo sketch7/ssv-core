@@ -9,7 +9,7 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   - npm install -g gulp jspm
-  - jspm config registries.github.auth %jspm_github_auth_token%
+  - jspm config registries.github.auth 0b04e1e0fed477cfe488f6858561f52b90e65d85
   # install modules
   - npm install
   - jspm install
