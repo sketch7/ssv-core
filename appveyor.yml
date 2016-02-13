@@ -2,14 +2,14 @@
 environment:
   nodejs_version: "5"
   jspm_github_auth_token:
-    secure: 4sWCirmMm0kNzOax0nyuH/kuN9vdFFEAVcDjiL3xNDxGcgAF9vTg7WEoufuC1gde
+    secure: c6su/h63p3zxUz+tgbqvdrPDmYe5B2nQMbA/SSPFgylgeSpa20h1AAd0v5hhhb6R
 
 # Install scripts. (runs after repo cloning)
 install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   - npm install -g gulp jspm
-  - jspm config registries.github.auth xx
+  - jspm config registries.github.auth %jspm_github_auth_token%
   # install modules
   - npm install
   - jspm install
