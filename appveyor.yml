@@ -1,7 +1,7 @@
 # Test against this version of Node.js
 environment:
   jspm_auth:
-    secure: c6su/h63p3zxUz+tgbqvdrPDmYe5B2nQMbA/SSPFgylgeSpa20h1AAd0v5hhhb6R
+    secure: q2JNqq1JlQ7ferxb6TSYgW1S/pUFEhYgGEDgl8iRAy25jM/y3NpoKXyKlACscd2zjbVGUCWlbnyjfMAfgl/0nKEi+KNDaNG5ZR8C3EvYaG8=
   nodejs_version: "5"
 
 # Install scripts. (runs after repo cloning)
