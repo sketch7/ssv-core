@@ -37,4 +37,4 @@ cache:
  - node_modules
  - '%APPDATA%\npm-cache'
  
-version: 0.1.{build}-{branch}
+version: {build}-{branch}
