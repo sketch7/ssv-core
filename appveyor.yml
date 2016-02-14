@@ -1,7 +1,7 @@
-# Test against this version of Node.js
 environment:
   JSPM_GITHUB_AUTH_TOKEN:
     secure: q2JNqq1JlQ7ferxb6TSYgW1S/pUFEhYgGEDgl8iRAy25jM/y3NpoKXyKlACscd2zjbVGUCWlbnyjfMAfgl/0nKEi+KNDaNG5ZR8C3EvYaG8=
+  # Test against this version of Node.js
   nodejs_version: "5"
 
 # Install scripts. (runs after repo cloning)
@@ -13,7 +13,7 @@ install:
   - npm install
   - jspm --version
   #- jspm config registries.github.auth %JSPM_GITHUB_AUTH_TOKEN%
-  - jspm registry export github
+  #- jspm registry export github
   - jspm install
   
 # Post-install test scripts.
