@@ -1,6 +1,6 @@
 # Test against this version of Node.js
 environment:
-  jspm_github_auth_token:
+  JSPM_GITHUB_AUTH_TOKEN:
     secure: q2JNqq1JlQ7ferxb6TSYgW1S/pUFEhYgGEDgl8iRAy25jM/y3NpoKXyKlACscd2zjbVGUCWlbnyjfMAfgl/0nKEi+KNDaNG5ZR8C3EvYaG8=
   nodejs_version: "5"
 
@@ -9,10 +9,11 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   - npm install -g gulp jspm
+  - echo JSPM %JSPM_GITHUB_AUTH_TOKEN%
   # install modules
   - npm install
   - jspm --version
-  - jspm config registries.github.auth %jspm_github_auth_token%
+  - jspm config registries.github.auth %JSPM_GITHUB_AUTH_TOKEN%
   - jspm registry export github
   - jspm install
   
