@@ -15,7 +15,7 @@
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "conventional-changelog": "^0.5.3",
+    "conventional-changelog": "^1.1.0",
     "del": "^2.2.0",
     "es6-module-loader": "^0.17.10",
     "gulp": "^3.9.0",
