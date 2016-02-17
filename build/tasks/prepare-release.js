@@ -35,17 +35,16 @@ gulp.task("prepare-release", (cb) => {
 		"bump-version",
 	//"doc",
 		"changelog",
-		cb
-		);
+		cb);
 });
+
 
 gulp.task("perform-release", (cb) => {
 	return runSequence(
 		"commit-changes",
 		"push-changes",
 		"create-new-tag",
-		cb
-		);
+		cb);
 });
 
 
@@ -56,7 +55,7 @@ gulp.task("commit-changes", () => {
 });
 
 gulp.task("push-changes", (cb) => {
-	git.push("origin", "master", cb);
+	git.push("origin", "HEAD", cb);
 });
 
 gulp.task("create-new-tag", (cb) => {
@@ -65,12 +64,12 @@ gulp.task("create-new-tag", (cb) => {
 		if (error) {
 			return cb(error);
 		}
-		git.push("origin", "master", { args: "--tags" }, cb);
+		git.push("origin", "HEAD", { args: "--tags" }, cb);
 	});
-
-	function getPackageJsonVersion() {
-		// We parse the json file instead of using require because require caches
-		// multiple calls so the version number won't be updated
-		return JSON.parse(fs.readFileSync("./package.json", "utf8")).version;
-	}
 });
+
+function getPackageJsonVersion() {
+	// We parse the json file instead of using require because require caches
+	// multiple calls so the version number won't be updated
+	return JSON.parse(fs.readFileSync("./package.json", "utf8")).version;
+}
