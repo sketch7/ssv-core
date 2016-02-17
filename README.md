@@ -3,7 +3,7 @@
 [changeLog]: ./doc/CHANGELOG.md
 
 [contribWiki]: ./doc/CONTRIBUTION.md
-[releaseWorkflowWiki]: ./doc/CONTRIBUTION.md
+[releaseWorkflowWiki]: ./doc/RELEASE-WORKFLOW.md
 
 # ssv-core
 [![Build status](https://ci.appveyor.com/api/projects/status/2e0an5hvxtfs08mf?svg=true)](https://ci.appveyor.com/project/chiko/ssv-core)
