@@ -14,7 +14,8 @@ module.exports = {
 	src: {
 		root: srcRoot,
 		tsd: tsdMainFile,
-		ts: `./${srcRoot}/${pkg.name}.ts`
+		ts: `./${srcRoot}/${pkg.name}.ts`,
+		karmaConfig: `karma.conf.js`
 	},
 	doc: "./doc",
 	packageName: pkg.name

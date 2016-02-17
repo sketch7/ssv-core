@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const util = require("gulp-util");
 
-const paths = require("../paths")
+const paths = require("../paths");
 
 gulp.task("watch", ["serve"], () => {
 

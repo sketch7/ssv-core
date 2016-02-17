@@ -59,6 +59,7 @@ define("math.svc", ["require", "exports"], function (require, exports) {
     var MathService = (function () {
         function MathService() {
         }
+        // TODO: remove once finish testing.
         MathService.prototype.add = function (value, valueB) {
             return value + valueB;
         };
@@ -74,13 +75,13 @@ define("string.svc", ["require", "exports"], function (require, exports) {
         StringService.prototype.interpolate = function (value, data, interpolatePrefix) {
             if (interpolatePrefix === void 0) { interpolatePrefix = ":"; }
             data = data || {};
-            var interpolatedUrl = value.replace(/(\(\s*|\s*\)|\s*\|\s*)/g, "");
+            var interpolatedValue = value.replace(/(\(\s*|\s*\)|\s*\|\s*)/g, "");
             for (var property in data) {
                 if (data.hasOwnProperty(property)) {
-                    interpolatedUrl = interpolatedUrl.replace("" + interpolatePrefix + property, data[property]);
+                    interpolatedValue = interpolatedValue.replace("" + interpolatePrefix + property, data[property]);
                 }
             }
-            return interpolatedUrl;
+            return interpolatedValue;
         };
         return StringService;
     }());

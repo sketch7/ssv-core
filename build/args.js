@@ -8,6 +8,9 @@ if (validBumpTypes.indexOf(bump) === -1) {
 	throw new Error(`Unrecognized bump "${bump}".`);
 }
 
+var versionSuffix = (argv.versionSuffix || "rc" ).toLowerCase();
+
 module.exports = {
-	bump: bump
+	bump: bump,
+	versionSuffix: versionSuffix
 };

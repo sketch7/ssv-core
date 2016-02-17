@@ -4,5 +4,5 @@ const del = require("del");
 const paths = require("../paths");
 
 gulp.task("clean", () => {
-	return del(paths.output.artifact)
+	return del(paths.output.artifact);
 });

@@ -1,4 +1,4 @@
-// Compiled using typings@0.6.6
+// Compiled using typings@0.6.7
 // Source: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/e69fe60f2d6377ea4fae539493997b098f52cad1/jquery/jquery.d.ts
 // Type definitions for jQuery 1.10.x / 2.0.x
 // Project: http://jquery.com/
