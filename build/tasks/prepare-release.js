@@ -11,7 +11,7 @@ var paths = require("../paths");
 
 gulp.task("bump-version", () => {
 	return gulp.src(["./package.json"])
-		.pipe(bump({ type: args.bump })) //major|minor|patch|prerelease
+		.pipe(bump({ type: args.bump, preid: args.versionSuffix })) //major|minor|patch|prerelease
 		.pipe(gulp.dest("./"));
 });
 
