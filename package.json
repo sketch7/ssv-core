@@ -8,7 +8,7 @@
     "utils"
   ],
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/amd/index.js",
   "repository": {
     "type": "git",
