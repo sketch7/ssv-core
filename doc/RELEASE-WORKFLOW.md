@@ -38,6 +38,9 @@ This process is more for a stable release, however the others are quite similar.
  - GitFlow -> Start new Release
   - Name should be according to the version X.X.X e.g. 1.2.3
  - Run `gulp prepare-release --bump minor` (or other bump options)
+ - *RC version is suggested at this point*
+ - TODO: This is still unfinished, as `perform-release` is a bit useless due to gitflow,
+ 	as a commit is needed at this point and a tag is not required due to finish release
  - Gitflow -> Finish Release
  - Checkout `master` branch
  - Run `gulp perform-release`
