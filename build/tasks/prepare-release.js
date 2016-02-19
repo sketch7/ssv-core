@@ -36,16 +36,8 @@ gulp.task("publish:rel", (cb) => {
 	return publish(null, "HEAD", cb);
 });
 
-function publish(bump, branch, cb) {
-	if (bump) {
-		args.bump = bump;
-	}
-	return runSequence(
-		"prepare-release",
-		"perform-release",
-		cb);
-}
-
+// utils
+// -------------
 
 gulp.task("bump-version", () => {
 	return gulp.src(["./package.json"])
@@ -89,4 +81,14 @@ function getPackageJsonVersion() {
 	// We parse the json file instead of using require because require caches
 	// multiple calls so the version number won't be updated
 	return JSON.parse(fs.readFileSync("./package.json", "utf8")).version;
+}
+
+function publish(bump, branch, cb) {
+	if (bump) {
+		args.bump = bump;
+	}
+	return runSequence(
+		"prepare-release",
+		"perform-release",
+		cb);
 }
