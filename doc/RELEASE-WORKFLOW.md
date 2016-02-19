@@ -18,9 +18,33 @@ git push origin develop
  - Auth to github by providing username and password/token
 
 
-## Gulp commands
+# Create new Release
+
+## New RC Release
+This process is more for an RC release (pre-release)
+ - Run `gulp publish`
+
+## New Stable Release
+This process is more for an RC release (pre-release)
+ - Run `gulp publish:rel --bump major|minor|patch (default: patch)`
+
+
+# Gulp Release Commands
 These are commands in order to help release easier, however they should be used accordingly depending
 on release type e.g. `dev, rc or stable`
+
+### Publish for RC
+Quick publish an "RC", this will prepare release and commit.
+```
+gulp publish
+```
+
+### Publish Rel
+Quick publish a stable release, this will prepare release and commit.
+```
+gulp publish:rel --bump major|minor|patch|prerelease (default: patch)
+```
+
 ### Prepare-Release
 Create a new build, test, bump version and generate changelog.
 ```
@@ -32,15 +56,3 @@ Commit, push and create tag.
 ```
 gulp perform-release
 ```
-
-## New Stable Release
-This process is more for a stable release, however the others are quite similar.
- - GitFlow -> Start new Release
-  - Name should be according to the version X.X.X e.g. 1.2.3
- - Run `gulp prepare-release --bump minor` (or other bump options)
- - *RC version is suggested at this point*
- - TODO: This is still unfinished, as `perform-release` is a bit useless due to gitflow,
- 	as a commit is needed at this point and a tag is not required due to finish release
- - Gitflow -> Finish Release
- - Checkout `master` branch
- - Run `gulp perform-release`
