@@ -21,17 +21,18 @@ git push origin develop
 # Create new Release
 
 ## New RC Release
-This process is more for an RC release (pre-release)
+RC release process
+ - Checkout `develop` branch (or release branch)
  - Run `gulp publish`
 
 ## New Stable Release
-This process is more for an RC release (pre-release)
+Stable release process
+ - Checkout `master`
  - Run `gulp publish:rel --bump major|minor|patch (default: patch)`
 
 
 # Gulp Release Commands
-These are commands in order to help release easier, however they should be used accordingly depending
-on release type e.g. `dev, rc or stable`
+Commands in order to help release easier.
 
 ### Publish for RC
 Quick publish an "RC", this will prepare release and commit.
