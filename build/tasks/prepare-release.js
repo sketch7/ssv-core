@@ -8,6 +8,7 @@ var fs = require("fs");
 var args = require("../args");
 var paths = require("../paths");
 
+var publishBranch;
 gulp.task("prepare-release", (cb) => {
 	return runSequence(
 		"lint",
@@ -64,7 +65,7 @@ gulp.task("commit-changes", () => {
 });
 
 gulp.task("push-changes", (cb) => {
-	git.push("origin", "HEAD", cb);
+	git.push("origin", publishBranch, cb);
 });
 
 gulp.task("create-new-tag", (cb) => {
@@ -73,7 +74,7 @@ gulp.task("create-new-tag", (cb) => {
 		if (error) {
 			return cb(error);
 		}
-		git.push("origin", "HEAD", { args: "--tags" }, cb);
+		git.push("origin", publishBranch, { args: "--tags" }, cb);
 	});
 });
 
@@ -87,6 +88,7 @@ function publish(bump, branch, cb) {
 	if (bump) {
 		args.bump = bump;
 	}
+	publishBranch = branch;
 	return runSequence(
 		"prepare-release",
 		"perform-release",
