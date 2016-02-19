@@ -8,6 +8,44 @@ var fs = require("fs");
 var args = require("../args");
 var paths = require("../paths");
 
+gulp.task("prepare-release", (cb) => {
+	return runSequence(
+		"lint",
+		"rebuild",
+		"test",
+		"copy-dist",
+		"bump-version",
+	//"doc",
+		"changelog",
+		cb);
+});
+
+gulp.task("perform-release", (cb) => {
+	return runSequence(
+		"commit-changes",
+		"push-changes",
+		"create-new-tag",
+		cb);
+});
+
+gulp.task("publish", (cb) => {
+	return publish("prerelease", "HEAD", cb);
+});
+
+gulp.task("publish:rel", (cb) => {
+	return publish(null, "HEAD", cb);
+});
+
+function publish(bump, branch, cb) {
+	if (bump) {
+		args.bump = bump;
+	}
+	return runSequence(
+		"prepare-release",
+		"perform-release",
+		cb);
+}
+
 
 gulp.task("bump-version", () => {
 	return gulp.src(["./package.json"])
@@ -26,32 +64,11 @@ gulp.task("changelog", () => {
 		.pipe(gulp.dest(`${paths.doc}`));
 });
 
-gulp.task("prepare-release", (cb) => {
-	return runSequence(
-		"lint",
-		"rebuild",
-		"test",
-		"copy-dist",
-		"bump-version",
-	//"doc",
-		"changelog",
-		cb);
-});
-
-
-gulp.task("perform-release", (cb) => {
-	return runSequence(
-		"commit-changes",
-		"push-changes",
-		"create-new-tag",
-		cb);
-});
-
-
 gulp.task("commit-changes", () => {
+	const version = getPackageJsonVersion();
 	return gulp.src(".")
 		.pipe(git.add())
-		.pipe(git.commit("[Prerelease] Bumped version number"));
+		.pipe(git.commit(`[Prepare Release] Bumped version to ${version}.`));
 });
 
 gulp.task("push-changes", (cb) => {
