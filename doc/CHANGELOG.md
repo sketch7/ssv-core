@@ -1,5 +1,11 @@
+<a name="0.1.6-rc.3"></a>
+## [0.1.6-rc.3](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.2...v0.1.6-rc.3) (2016-02-19)
+
+
+
+
 <a name="0.1.6-rc.2"></a>
-## [0.1.6-rc.2](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.1...v0.1.6-rc.2) (2016-02-19)
+## [0.1.6-rc.2](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.1...0.1.6-rc.2) (2016-02-19)
 
 
 ### Code Refactoring
