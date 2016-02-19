@@ -1,5 +1,20 @@
+<a name="0.1.6-rc.2"></a>
+## [0.1.6-rc.2](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.1...v0.1.6-rc.2) (2016-02-19)
+
+
+### Code Refactoring
+
+* **collection:** renamed ISelectable to Selectable ([33dc8e4](https://github.com/sketch7/ssv-core/commit/33dc8e4))
+
+
+### BREAKING CHANGES
+
+* collection: renamed `ISelectable` to `Selectable`
+
+
+
 <a name="0.1.6-rc.1"></a>
-## [0.1.6-rc.1](https://github.com/sketch7/ssv-core/compare/0.1.5...v0.1.6-rc.1) (2016-02-18)
+## [0.1.6-rc.1](https://github.com/sketch7/ssv-core/compare/0.1.5...0.1.6-rc.1) (2016-02-18)
 
 
 

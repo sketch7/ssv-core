@@ -1,5 +1,5 @@
 declare module "collection.svc" {
-    export interface ISelectable {
+    export interface Selectable {
         /**
          * Gets or sets whether the item is selected or not.
          */
@@ -11,7 +11,7 @@ declare module "collection.svc" {
          * @param {ISelectable[]} collection collection to unselect.
          * @param {ISelectable} selectItem item to select.
          */
-        mutualExclusiveSelect(collection: ISelectable[], selectItem: ISelectable): void;
+        mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void;
     }
 }
 declare module "enum.svc" {
