@@ -29,6 +29,7 @@ RC release process
 Stable release process
  - Checkout `master`
  - Run `gulp publish:rel --bump major|minor|patch (default: patch)`
+ - Merge `master => develop`
 
 
 # Gulp Release Commands
