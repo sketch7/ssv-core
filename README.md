@@ -5,6 +5,9 @@
 [contribWiki]: ./doc/CONTRIBUTION.md
 [releaseWorkflowWiki]: ./doc/RELEASE-WORKFLOW.md
 
+[jspm]: http://jspm.io
+[typings]: https://github.com/typings/typings
+
 # ssv-core
 [![Build status](https://ci.appveyor.com/api/projects/status/2e0an5hvxtfs08mf?svg=true)](https://ci.appveyor.com/project/chiko/ssv-core)
 [![Build status](https://ci.appveyor.com/api/projects/status/2e0an5hvxtfs08mf/branch/master?svg=true)](https://ci.appveyor.com/project/chiko/ssv-core/branch/master)
@@ -20,9 +23,14 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 [Change logs][changeLog] | [Project Repository][projectUri] | [Contribution guidelines][contribWiki]
 
 # Installation
-
-> TODO
-
+Get library via [jspm]
+```
+jspm install ssv-core=github:sketch7/ssv-core
+```
+TypeScript Typings via [typings]
+```
+typings install github:sketch7/ssv-core --ambient --save
+```
 
 # Usage
 > TODO
