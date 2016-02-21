@@ -29,7 +29,7 @@ jspm install ssv-core=github:sketch7/ssv-core
 ```
 TypeScript Typings via [typings]
 ```
-typings install github:sketch7/ssv-core --ambient --save
+typings install github:sketch7/ssv-core --save
 ```
 
 # Usage
