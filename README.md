@@ -25,7 +25,7 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 # Installation
 Get library via [jspm]
 ```
-jspm install ssv-core=github:sketch7/ssv-core
+jspm install npm:ssv-core
 ```
 TypeScript Typings via [typings]
 ```
@@ -33,7 +33,11 @@ typings install github:sketch7/ssv-core --save
 ```
 
 # Usage
-> TODO
+```
+import {utils} from "ssv-core";
+
+let name = utils.string.interpolate("name=:name", { name: "Chiko" });
+```
 
 
 # Getting Started
