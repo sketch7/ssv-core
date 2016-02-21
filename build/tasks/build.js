@@ -15,7 +15,7 @@ gulp.task("build", (cb) => {
 
 gulp.task("rebuild", (cb) => {
 	return runSeq(
-		"clean",
+		"clean:artifact",
 		"build",
 		cb);
 });
