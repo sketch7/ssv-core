@@ -24,11 +24,13 @@ git push origin develop
 RC release process
  - Checkout `develop` branch (or release branch)
  - Run `gulp publish`
+ - Run `npm publish`
 
 ## New Stable Release
 Stable release process
  - Checkout `master`
  - Run `gulp publish:rel --bump major|minor|patch (default: patch)`
+ - Run `npm publish`
  - Merge `master => develop`
 
 
