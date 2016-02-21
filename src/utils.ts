@@ -1,7 +1,7 @@
-import {MathService} from "./math.svc";
-import {StringService} from "./string.svc";
-import {CollectionService} from "./collection.svc";
-import {EnumService} from "./enum.svc";
+import {MathService} from "./math";
+import {StringService} from "./string";
+import {CollectionService} from "./collection";
+import {EnumService} from "./enum";
 
 export class Utils {
 	math = new MathService();

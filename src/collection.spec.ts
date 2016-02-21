@@ -1,4 +1,4 @@
-﻿import {CollectionService, Selectable} from "./collection.svc";
+﻿import {CollectionService, Selectable} from "./collection";
 
 interface ISelectableMock extends Selectable {
 	key: string;

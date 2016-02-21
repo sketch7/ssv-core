@@ -1,4 +1,4 @@
-﻿import {EnumService} from "./enum.svc";
+﻿import {EnumService} from "./enum";
 
 enum CharacterStatus {
 	Elite = 1,

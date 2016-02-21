@@ -1,4 +1,4 @@
-import {StringService} from "./string.svc";
+import {StringService} from "./string";
 
 describe("StringService", () => {
 
