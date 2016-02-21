@@ -1,5 +1,15 @@
+<a name="0.2.1-rc.0"></a>
+## [0.2.1-rc.0](https://github.com/sketch7/ssv-core/compare/0.2.0...v0.2.1-rc.0) (2016-02-21)
+
+
+### Features
+
+* **typings:** modified typings to include devDep ([3288822](https://github.com/sketch7/ssv-core/commit/3288822))
+
+
+
 <a name="0.2.0"></a>
-# [0.2.0](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.3...v0.2.0) (2016-02-19)
+# [0.2.0](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.3...0.2.0) (2016-02-19)
 
 
 
