@@ -4,7 +4,7 @@ describe("StringExtensionsSpecs", () => {
 
 	let stringExtensions = new StringExtensions();
 
-	describe("interpolate", () => {
+	describe("interpolateSpecs", () => {
 
 		describe("given default prefix (:)", () => {
 

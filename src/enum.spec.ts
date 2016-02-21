@@ -12,7 +12,7 @@ describe("EnumExtensions", () => {
 
 	let enumExtensions = new EnumExtensions();
 
-	describe("getNames", () => {
+	describe("getNamesSpecs", () => {
 
 		it("should return enum names as array.", () => {
 			let result = enumExtensions.getNames(CharacterStatus);
@@ -21,7 +21,7 @@ describe("EnumExtensions", () => {
 
 	});
 
-	describe("getNamesKebab", () => {
+	describe("getNamesKebabSpecs", () => {
 
 		it("should return enum kebab names as array.", () => {
 			let result = enumExtensions.getNamesKebab(CharacterStatus);
@@ -30,7 +30,7 @@ describe("EnumExtensions", () => {
 
 	});
 
-	describe("getValues", () => {
+	describe("getValuesSpecs", () => {
 
 		it("should return enum values as array.", () => {
 			let result = enumExtensions.getValues(CharacterStatus);
