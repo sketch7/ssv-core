@@ -1,5 +1,4 @@
 define(["require", "exports", "lodash"], function (require, exports, _) {
-    "use strict";
     var CollectionService = (function () {
         function CollectionService() {
         }
@@ -15,7 +14,7 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
             selectItem.isSelected = true;
         };
         return CollectionService;
-    }());
+    })();
     exports.CollectionService = CollectionService;
 });
 

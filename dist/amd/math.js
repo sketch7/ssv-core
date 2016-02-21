@@ -1,5 +1,4 @@
 define(["require", "exports"], function (require, exports) {
-    "use strict";
     var MathService = (function () {
         function MathService() {
         }
@@ -8,7 +7,7 @@ define(["require", "exports"], function (require, exports) {
             return value + valueB;
         };
         return MathService;
-    }());
+    })();
     exports.MathService = MathService;
 });
 

@@ -1,5 +1,4 @@
 define(["require", "exports"], function (require, exports) {
-    "use strict";
     var StringService = (function () {
         function StringService() {
         }
@@ -15,7 +14,7 @@ define(["require", "exports"], function (require, exports) {
             return interpolatedValue;
         };
         return StringService;
-    }());
+    })();
     exports.StringService = StringService;
 });
 

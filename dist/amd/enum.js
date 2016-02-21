@@ -1,5 +1,4 @@
 define(["require", "exports", "lodash"], function (require, exports, _) {
-    "use strict";
     var EnumService = (function () {
         function EnumService() {
         }
@@ -28,7 +27,7 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
             return Object.keys(e).map(function (v) { return parseInt(v, 10); }).filter(function (v) { return !isNaN(v); });
         };
         return EnumService;
-    }());
+    })();
     exports.EnumService = EnumService;
 });
 

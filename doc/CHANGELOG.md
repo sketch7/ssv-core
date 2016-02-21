@@ -1,5 +1,15 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.1...v0.3.0) (2016-02-21)
+
+
+### Bug Fixes
+
+* **package:** package has been changed from bundled to unbundled due to issues with jspm when  ([eb076ac](https://github.com/sketch7/ssv-core/commit/eb076ac))
+
+
+
 <a name="0.2.1-rc.1"></a>
-## [0.2.1-rc.1](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.0...v0.2.1-rc.1) (2016-02-21)
+## [0.2.1-rc.1](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.0...0.2.1-rc.1) (2016-02-21)
 
 
 
