@@ -12,10 +12,8 @@ var publishBranch;
 gulp.task("prepare-release", (cb) => {
 	return runSequence(
 		"lint",
-		"clean:dist",
-		"rebuild",
+		"rebuild:rel",
 		"test",
-		"copy-dist",
 		"bump-version",
 	//"doc",
 		"changelog",

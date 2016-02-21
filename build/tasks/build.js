@@ -20,6 +20,14 @@ gulp.task("rebuild", (cb) => {
 		cb);
 });
 
+gulp.task("rebuild:rel", (cb) => {
+	return runSeq(
+		"clean",
+		"build",
+		"copy-dist",
+		cb);
+});
+
 // scripts
 gulp.task("compile:ts", () => {
 	const tsProject = getTscProject();
