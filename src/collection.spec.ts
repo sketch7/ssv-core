@@ -1,15 +1,15 @@
-﻿import {CollectionService, Selectable} from "./collection";
+﻿import {CollectionExtensions, Selectable} from "./collection";
 
-interface ISelectableMock extends Selectable {
+interface SelectableMock extends Selectable {
 	key: string;
 }
 
-describe("CollectionServiceSpec", () => {
+describe("CollectionExtensionsSpecs", () => {
 
-	let collectionService = new CollectionService();
+	let collectionExtensions = new CollectionExtensions();
 
 	describe("mutualExclusiveSelectSpec", () => {
-		let mockSelectableCollection: ISelectableMock[];
+		let mockSelectableCollection: SelectableMock[];
 		beforeEach(() => {
 			mockSelectableCollection = [
 				{ isSelected: true, key: "a" },
@@ -24,7 +24,7 @@ describe("CollectionServiceSpec", () => {
 			it("should select only the selected item.", () => {
 
 				let itemToSelect = mockSelectableCollection[1];
-				collectionService.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
+				collectionExtensions.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
 
 				expect(itemToSelect.isSelected).toBeTruthy();
 				let unselected = mockSelectableCollection.filter(x => !x.isSelected);
@@ -38,7 +38,7 @@ describe("CollectionServiceSpec", () => {
 			it("should not select any.", () => {
 
 				let itemToSelect = { key: "e", isSelected: false };
-				collectionService.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
+				collectionExtensions.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
 
 				expect(itemToSelect.isSelected).toBeTruthy();
 				let unselected = mockSelectableCollection.filter(x => !x.isSelected);

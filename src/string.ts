@@ -1,4 +1,4 @@
-﻿export class StringService {
+﻿export class StringExtensions {
 
 	interpolate(value: string, data: any, interpolatePrefix = ":") {
 		data = data || {};

@@ -7,12 +7,12 @@ export interface Selectable {
 	isSelected: boolean;
 }
 
-export class CollectionService {
+export class CollectionExtensions {
 
 	/**
 	 * Unselect all collection items and select only the item specified.
-	 * @param {ISelectable[]} collection collection to unselect.
-	 * @param {ISelectable} selectItem item to select.
+	 * @param {Selectable[]} collection collection to unselect.
+	 * @param {Selectable} selectItem item to select.
 	 */
 	mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void {
 

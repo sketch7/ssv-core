@@ -1,13 +1,13 @@
-import {MathService} from "./math";
-import {StringService} from "./string";
-import {CollectionService} from "./collection";
-import {EnumService} from "./enum";
+import {MathExtensions} from "./math";
+import {StringExtensions} from "./string";
+import {CollectionExtensions} from "./collection";
+import {EnumExtensions} from "./enum";
 
 export class Utils {
-	math = new MathService();
-	string = new StringService();
-	collection = new CollectionService();
-	enum = new EnumService();
+	math = new MathExtensions();
+	string = new StringExtensions();
+	collection = new CollectionExtensions();
+	enum = new EnumExtensions();
 }
 
 export let utils = new Utils();

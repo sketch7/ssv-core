@@ -1,6 +1,6 @@
 ﻿import * as _ from "lodash";
 
-export class EnumService {
+export class EnumExtensions {
 
 	/**
 	 * Gets all names of the enum as an array.

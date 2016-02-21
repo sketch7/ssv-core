@@ -1,8 +1,8 @@
-import {StringService} from "./string";
+import {StringExtensions} from "./string";
 
-describe("StringService", () => {
+describe("StringExtensionsSpecs", () => {
 
-	let stringService = new StringService();
+	let stringExtensions = new StringExtensions();
 
 	describe("interpolate", () => {
 
@@ -10,7 +10,7 @@ describe("StringService", () => {
 
 			it("should replace :id with data param", () => {
 
-				let result = stringService.interpolate("api/portal/:id", { id: "sketch7" });
+				let result = stringExtensions.interpolate("api/portal/:id", { id: "sketch7" });
 				expect(result).toBe("api/portal/sketch7");
 			});
 
@@ -20,7 +20,7 @@ describe("StringService", () => {
 
 			it("should replace :id and :product with data params respectively", () => {
 
-				let result = stringService.interpolate("api/:product/:id", { id: "sketch7", product: "cms" });
+				let result = stringExtensions.interpolate("api/:product/:id", { id: "sketch7", product: "cms" });
 				expect(result).toBe("api/cms/sketch7");
 			});
 
@@ -30,7 +30,7 @@ describe("StringService", () => {
 
 			it("should replace --id with data param", () => {
 
-				let result = stringService.interpolate("api/portal/--id", { id: "sketch7" }, "--");
+				let result = stringExtensions.interpolate("api/portal/--id", { id: "sketch7" }, "--");
 				expect(result).toBe("api/portal/sketch7");
 			});
 

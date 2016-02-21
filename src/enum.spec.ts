@@ -1,4 +1,4 @@
-﻿import {EnumService} from "./enum";
+﻿import {EnumExtensions} from "./enum";
 
 enum CharacterStatus {
 	Elite = 1,
@@ -8,14 +8,14 @@ enum CharacterStatus {
 }
 
 
-describe("EnumService", () => {
+describe("EnumExtensions", () => {
 
-	let enumService = new EnumService();
+	let enumExtensions = new EnumExtensions();
 
 	describe("getNames", () => {
 
 		it("should return enum names as array.", () => {
-			let result = enumService.getNames(CharacterStatus);
+			let result = enumExtensions.getNames(CharacterStatus);
 			expect(result).toEqual(["Elite", "Boss", "Normal", "RaidBoss"]);
 		});
 
@@ -24,7 +24,7 @@ describe("EnumService", () => {
 	describe("getNamesKebab", () => {
 
 		it("should return enum kebab names as array.", () => {
-			let result = enumService.getNamesKebab(CharacterStatus);
+			let result = enumExtensions.getNamesKebab(CharacterStatus);
 			expect(result).toEqual(["elite", "boss", "normal", "raid-boss"]);
 		});
 
@@ -33,7 +33,7 @@ describe("EnumService", () => {
 	describe("getValues", () => {
 
 		it("should return enum values as array.", () => {
-			let result = enumService.getValues(CharacterStatus);
+			let result = enumExtensions.getValues(CharacterStatus);
 			expect(result).toEqual([1, 2, 3, 4]);
 		});
 
