@@ -1,6 +1,6 @@
 {
 	"name": "ssv-core",
-	"main": "dist/ssv-core.d.ts",
+	"main": "dist/typings/ssv-core.d.ts",
 	"ambientDependencies": {
 		"lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#e69fe60f2d6377ea4fae539493997b098f52cad1"
 	},

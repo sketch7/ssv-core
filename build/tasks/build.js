@@ -23,7 +23,7 @@ gulp.task("rebuild", (cb) => {
 // scripts
 gulp.task("compile:ts", () => {
 	const tsProject = getTscProject();
-	const tsResult = gulp.src([paths.src.tsd, paths.src.ts])
+	const tsResult = gulp.src([paths.src.tsd, paths.src.ts, `!${paths.src.testTs}`])
 		.pipe(plumber())
 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())
@@ -32,15 +32,15 @@ gulp.task("compile:ts", () => {
 	return merge([
 		tsResult.js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(`${paths.output.artifact}`)),
-		tsResult.dts.pipe(gulp.dest(`${paths.output.artifact}`))
+			.pipe(gulp.dest(`${paths.output.artifact}/amd`)),
+		tsResult.dts.pipe(gulp.dest(`${paths.output.artifact}/typings`))
 				]);
 });
 
 function getTscProject() {
 	return tsc.createProject("tsconfig.json", {
 		typescript: require("typescript"),
-		outFile: `${paths.packageName}.js`,
+		//outFile: `${paths.packageName}.js`
 	});
 }
 
@@ -50,11 +50,11 @@ gulp.task("copy-dist", () => {
 });
 
 gulp.task("copy-dist:scripts", () => {
-	return gulp.src(`${paths.output.artifact}/**/*.js`)
+	return gulp.src(`${paths.output.artifact}/amd/**/*.js`)
 		.pipe(gulp.dest(`${paths.output.dist}/amd`));
 });
 
 gulp.task("copy-dist:dts", () => {
-	return gulp.src(`${paths.output.artifact}/*.d.ts`)
-		.pipe(gulp.dest(`${paths.output.dist}`));
+	return gulp.src(`${paths.output.artifact}/typings/*.d.ts`)
+		.pipe(gulp.dest(`${paths.output.dist}/typings`));
 });
