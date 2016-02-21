@@ -13,7 +13,7 @@ gulp.task("prepare-release", (cb) => {
 	return runSequence(
 		"lint",
 		"rebuild:rel",
-		"test",
+		//"test",
 		"bump-version",
 	//"doc",
 		"changelog",
