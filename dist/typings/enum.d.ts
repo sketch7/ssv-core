@@ -1,4 +1,4 @@
-export declare class EnumService {
+export declare class EnumExtensions {
     /**
      * Gets all names of the enum as an array.
      * @param {any} e enum to get data of.

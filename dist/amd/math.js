@@ -1,14 +1,14 @@
 define(["require", "exports"], function (require, exports) {
-    var MathService = (function () {
-        function MathService() {
+    var MathExtensions = (function () {
+        function MathExtensions() {
         }
         // TODO: remove once finish testing.
-        MathService.prototype.add = function (value, valueB) {
+        MathExtensions.prototype.add = function (value, valueB) {
             return value + valueB;
         };
-        return MathService;
+        return MathExtensions;
     })();
-    exports.MathService = MathService;
+    exports.MathExtensions = MathExtensions;
 });
 
 //# sourceMappingURL=math.js.map

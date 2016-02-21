@@ -1,8 +1,16 @@
 define(["require", "exports"], function (require, exports) {
-    var StringService = (function () {
-        function StringService() {
+    var StringExtensions = (function () {
+        function StringExtensions() {
         }
-        StringService.prototype.interpolate = function (value, data, interpolatePrefix) {
+        /**
+         * Interpolates the string with the data specified by using the prefix (:) default as token.
+         * e.g. 'api/:lang/games' => 'api/en/games'
+         * @param {string} value string template to interpolate
+         * @param {*} data data object to replace tokens
+         * @param {string} [interpolatePrefix=":"] interpolation token prefix
+         * @returns interpolated string
+         */
+        StringExtensions.prototype.interpolate = function (value, data, interpolatePrefix) {
             if (interpolatePrefix === void 0) { interpolatePrefix = ":"; }
             data = data || {};
             var interpolatedValue = value.replace(/(\(\s*|\s*\)|\s*\|\s*)/g, "");
@@ -13,9 +21,9 @@ define(["require", "exports"], function (require, exports) {
             }
             return interpolatedValue;
         };
-        return StringService;
+        return StringExtensions;
     })();
-    exports.StringService = StringService;
+    exports.StringExtensions = StringExtensions;
 });
 
 //# sourceMappingURL=string.js.map

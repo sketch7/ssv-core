@@ -1,3 +1,3 @@
-export declare class MathService {
+export declare class MathExtensions {
     add(value: number, valueB: number): number;
 }

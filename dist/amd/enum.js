@@ -1,13 +1,13 @@
 define(["require", "exports", "lodash"], function (require, exports, _) {
-    var EnumService = (function () {
-        function EnumService() {
+    var EnumExtensions = (function () {
+        function EnumExtensions() {
         }
         /**
          * Gets all names of the enum as an array.
          * @param {any} e enum to get data of.
          * @returns enum definition names as a string array e.g. ["Elite", "Boss", "Normal", "RaidBoss"].
          */
-        EnumService.prototype.getNames = function (e) {
+        EnumExtensions.prototype.getNames = function (e) {
             return Object.keys(e).filter(function (v) { return isNaN(parseInt(v, 10)); });
         };
         /**
@@ -15,7 +15,7 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
          * @param {any} e enum to get data of.
          * @returns enum definition names as a string array with kebab case e.g. ["elite", "boss", "normal", "raid-boss"].
          */
-        EnumService.prototype.getNamesKebab = function (e) {
+        EnumExtensions.prototype.getNamesKebab = function (e) {
             return Object.keys(e).map(function (v) { return _.kebabCase(v); }).filter(function (v) { return isNaN(parseInt(v, 10)); });
         };
         /**
@@ -23,12 +23,12 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
          * @param {any} e enum to get data of.
          * @returns enum values as number array e.g. [1, 2, 3, 4]
          */
-        EnumService.prototype.getValues = function (e) {
+        EnumExtensions.prototype.getValues = function (e) {
             return Object.keys(e).map(function (v) { return parseInt(v, 10); }).filter(function (v) { return !isNaN(v); });
         };
-        return EnumService;
+        return EnumExtensions;
     })();
-    exports.EnumService = EnumService;
+    exports.EnumExtensions = EnumExtensions;
 });
 
 //# sourceMappingURL=enum.js.map
