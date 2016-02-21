@@ -11,4 +11,4 @@ define(["require", "exports", "./collection", "./enum", "./keycode", "./math", "
     __export(utils_1);
 });
 
-//# sourceMappingURL=ssv-core.js.map
+//# sourceMappingURL=index.js.map
