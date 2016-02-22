@@ -12,7 +12,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/2e0an5hvxtfs08mf?svg=true)](https://ci.appveyor.com/project/chiko/ssv-core)
 [![Build status](https://ci.appveyor.com/api/projects/status/2e0an5hvxtfs08mf/branch/master?svg=true)](https://ci.appveyor.com/project/chiko/ssv-core/branch/master)
 [![bitHound Overall Score](https://www.bithound.io/github/sketch7/ssv-core/badges/score.svg)](https://www.bithound.io/github/sketch7/ssv-core)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/sketch7/ssv-core/badges/devDependencies.svg)](https://www.bithound.io/github/sketch7/ssv-core/master/dependencies/npm)
+[![npm version](https://badge.fury.io/js/ssv-core.svg)](https://badge.fury.io/js/ssv-core)
 
 ssv core components, utilities and services
 
