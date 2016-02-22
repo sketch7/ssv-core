@@ -54,7 +54,7 @@ Install/setup the following:
 
 
 ```
-npm install -g git gulp tsd karma-cli jspm
+npm install -g git gulp typings karma-cli jspm
 ```
 
 
