@@ -10,12 +10,12 @@ enum CharacterStatus {
 
 describe("EnumExtensions", () => {
 
-	let enumExtensions = new EnumExtensions();
+	let SUT = new EnumExtensions();
 
 	describe("getNamesSpecs", () => {
 
 		it("should return enum names as array.", () => {
-			let result = enumExtensions.getNames(CharacterStatus);
+			let result = SUT.getNames(CharacterStatus);
 			expect(result).toEqual(["Elite", "Boss", "Normal", "RaidBoss"]);
 		});
 
@@ -24,7 +24,7 @@ describe("EnumExtensions", () => {
 	describe("getNamesKebabSpecs", () => {
 
 		it("should return enum kebab names as array.", () => {
-			let result = enumExtensions.getNamesKebab(CharacterStatus);
+			let result = SUT.getNamesKebab(CharacterStatus);
 			expect(result).toEqual(["elite", "boss", "normal", "raid-boss"]);
 		});
 
@@ -33,7 +33,7 @@ describe("EnumExtensions", () => {
 	describe("getValuesSpecs", () => {
 
 		it("should return enum values as array.", () => {
-			let result = enumExtensions.getValues(CharacterStatus);
+			let result = SUT.getValues(CharacterStatus);
 			expect(result).toEqual([1, 2, 3, 4]);
 		});
 

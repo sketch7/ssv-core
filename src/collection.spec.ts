@@ -6,7 +6,7 @@ interface SelectableMock extends Selectable {
 
 describe("CollectionExtensionsSpecs", () => {
 
-	let collectionExtensions = new CollectionExtensions();
+	let SUT = new CollectionExtensions();
 
 	describe("mutualExclusiveSelectSpec", () => {
 		let mockSelectableCollection: SelectableMock[];
@@ -24,7 +24,7 @@ describe("CollectionExtensionsSpecs", () => {
 			it("should select only the selected item.", () => {
 
 				let itemToSelect = mockSelectableCollection[1];
-				collectionExtensions.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
+				SUT.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
 
 				expect(itemToSelect.isSelected).toBeTruthy();
 				let unselected = mockSelectableCollection.filter(x => !x.isSelected);
@@ -38,7 +38,7 @@ describe("CollectionExtensionsSpecs", () => {
 			it("should not select any.", () => {
 
 				let itemToSelect = { key: "e", isSelected: false };
-				collectionExtensions.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
+				SUT.mutualExclusiveSelect(mockSelectableCollection, itemToSelect);
 
 				expect(itemToSelect.isSelected).toBeTruthy();
 				let unselected = mockSelectableCollection.filter(x => !x.isSelected);
