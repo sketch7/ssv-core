@@ -3,7 +3,7 @@ const util = require("gulp-util");
 
 const paths = require("../paths");
 
-gulp.task("watch", ["serve"], () => {
+gulp.task("watch", () => {
 
 	// ts
 	gulp.watch(paths.src.ts, ["compile:ts"])
