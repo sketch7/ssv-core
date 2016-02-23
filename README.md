@@ -25,7 +25,7 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 # Installation
 Get library via [jspm]
 ```
-jspm install npm:ssv-core
+jspm install ssv-core
 ```
 TypeScript Typings via [typings]
 ```
