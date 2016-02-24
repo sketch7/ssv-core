@@ -25,7 +25,7 @@
 	 * Parses a value to boolean "humanized" e.g.
 	 * true => "true", "1", "yes", "y", "on"
 	 * true => "false", "0", "no", "n", "off"
-	 * @param {string} value to parse
+	 * @param {string} value string value to parse
 	 * @returns {boolean} true or false
 	 */
 	parseBool(value: string): boolean {
