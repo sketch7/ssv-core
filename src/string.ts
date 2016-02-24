@@ -21,4 +21,29 @@
 		return interpolatedValue;
 	}
 
+	/**
+	 * Parses a value to boolean "humanized" e.g.
+	 * true => "true", "1", "yes", "y", "on"
+	 * true => "false", "0", "no", "n", "off"
+	 * @param {string} value to parse
+	 * @returns {boolean} true or false
+	 */
+	parseBool(value: string): boolean {
+		switch (String(value).toLowerCase()) {
+			case "true":
+			case "1":
+			case "yes":
+			case "y":
+			case "on":
+				return true;
+			case "false":
+			case "0":
+			case "no":
+			case "n":
+			case "off":
+				return false;
+			default:
+				return false;
+		}
+	}
 }

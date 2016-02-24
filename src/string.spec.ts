@@ -37,4 +37,115 @@ describe("StringExtensionsSpecs", () => {
 		});
 	});
 
+	describe("parseBoolSpecs", () => {
+
+		describe("given a truthy value", () => {
+
+			describe("when value of 'true'", () => {
+
+				it("should return true", () => {
+
+					let result = SUT.parseBool("true");
+					expect(result).toBe(true);
+				});
+
+			});
+
+			describe("when value of '1'", () => {
+
+				it("should return true", () => {
+
+					let result = SUT.parseBool("1");
+					expect(result).toBe(true);
+				});
+
+			});
+
+			describe("when value of 'yes'", () => {
+
+				it("should return true", () => {
+
+					let result = SUT.parseBool("yes");
+					expect(result).toBe(true);
+				});
+
+			});
+
+			describe("when value of 'y'", () => {
+
+				it("should return true", () => {
+
+					let result = SUT.parseBool("y");
+					expect(result).toBe(true);
+				});
+
+			});
+
+			describe("when value of 'on'", () => {
+
+				it("should return true", () => {
+
+					let result = SUT.parseBool("on");
+					expect(result).toBe(true);
+				});
+
+			});
+		});
+
+		describe("given a falsy value", () => {
+
+			describe("when value of 'false'", () => {
+
+				it("should return false", () => {
+
+					let result = SUT.parseBool("false");
+					expect(result).toBe(false);
+				});
+
+			});
+
+			describe("when value of '0'", () => {
+
+				it("should return false", () => {
+
+					let result = SUT.parseBool("0");
+					expect(result).toBe(false);
+				});
+
+			});
+
+			describe("when value of 'no'", () => {
+
+				it("should return false", () => {
+
+					let result = SUT.parseBool("no");
+					expect(result).toBe(false);
+				});
+
+			});
+
+			describe("when value of 'n'", () => {
+
+				it("should return false", () => {
+
+					let result = SUT.parseBool("n");
+					expect(result).toBe(false);
+				});
+
+			});
+
+			describe("when value of 'off'", () => {
+
+				it("should return false", () => {
+
+					let result = SUT.parseBool("off");
+					expect(result).toBe(false);
+				});
+
+			});
+		});
+
+
+	});
+
 });
