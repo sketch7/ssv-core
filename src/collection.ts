@@ -1,6 +1,4 @@
-﻿import * as _ from "lodash";
-
-export interface Selectable {
+﻿export interface Selectable {
 	/**
 	 * Gets or sets whether the item is selected or not.
 	 */
@@ -16,9 +14,9 @@ export class CollectionExtensions {
 	 */
 	mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void {
 
-		_.forEach(collection, (x: Selectable) => {
-			x.isSelected = false;
-		});
+		for (let item of collection) {
+			item.isSelected = false;
+		}
 
 		selectItem.isSelected = true;
 	}
