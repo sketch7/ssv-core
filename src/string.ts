@@ -2,6 +2,11 @@
 
 export class StringExtensions {
 
+	/**
+	 * parseBool configuration to add/remove possible values. 
+	 * 
+	 * @type {Dictionary<boolean>}
+	 */
 	parseBoolConfig: Dictionary<boolean> = {
 		// truthy
 		"true": true,
@@ -41,7 +46,7 @@ export class StringExtensions {
 	/**
 	 * Parses a value to boolean "humanized", which can also be configured in order to add additional values. e.g.
 	 * true => "true", "1", "yes", "y", "on"
-	 * true => "false", "0", "no", "n", "off"
+	 * false => "false", "0", "no", "n", "off"
 	 * @param {string} value string value to parse
 	 * @returns {boolean} true or false
 	 */
