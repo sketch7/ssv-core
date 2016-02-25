@@ -1,4 +1,5 @@
-define(["require", "exports", "lodash"], function (require, exports, _) {
+define(["require", "exports"], function (require, exports) {
+    "use strict";
     var CollectionExtensions = (function () {
         function CollectionExtensions() {
         }
@@ -8,13 +9,14 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
          * @param {Selectable} selectItem item to select.
          */
         CollectionExtensions.prototype.mutualExclusiveSelect = function (collection, selectItem) {
-            _.forEach(collection, function (x) {
-                x.isSelected = false;
-            });
+            for (var _i = 0, collection_1 = collection; _i < collection_1.length; _i++) {
+                var item = collection_1[_i];
+                item.isSelected = false;
+            }
             selectItem.isSelected = true;
         };
         return CollectionExtensions;
-    })();
+    }());
     exports.CollectionExtensions = CollectionExtensions;
 });
 

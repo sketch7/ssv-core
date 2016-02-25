@@ -1,5 +1,17 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/sketch7/ssv-core/compare/0.4.0...v0.5.0) (2016-02-25)
+
+
+### Features
+
+* **collection:** add `Dictionary<T>` interface ([5029543](https://github.com/sketch7/ssv-core/commit/5029543))
+* **math:** implemented `round` functionality to math which supports both string and numeric ([3730731](https://github.com/sketch7/ssv-core/commit/3730731))
+* **string:** implemented `parseBool` which is more humanize friendly boolean parsing ([965f7f8](https://github.com/sketch7/ssv-core/commit/965f7f8))
+
+
+
 <a name="0.4.0"></a>
-# [0.4.0](https://github.com/sketch7/ssv-core/compare/0.3.0...v0.4.0) (2016-02-21)
+# [0.4.0](https://github.com/sketch7/ssv-core/compare/0.3.0...0.4.0) (2016-02-21)
 
 
 

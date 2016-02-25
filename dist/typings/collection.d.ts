@@ -4,6 +4,9 @@ export interface Selectable {
      */
     isSelected: boolean;
 }
+export interface Dictionary<T> {
+    [key: string]: T;
+}
 export declare class CollectionExtensions {
     /**
      * Unselect all collection items and select only the item specified.

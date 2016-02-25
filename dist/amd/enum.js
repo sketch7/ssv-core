@@ -1,4 +1,5 @@
 define(["require", "exports", "lodash"], function (require, exports, _) {
+    "use strict";
     var EnumExtensions = (function () {
         function EnumExtensions() {
         }
@@ -27,7 +28,7 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
             return Object.keys(e).map(function (v) { return parseInt(v, 10); }).filter(function (v) { return !isNaN(v); });
         };
         return EnumExtensions;
-    })();
+    }());
     exports.EnumExtensions = EnumExtensions;
 });
 
