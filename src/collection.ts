@@ -5,6 +5,10 @@
 	isSelected: boolean;
 }
 
+export interface Dictionary<T> {
+	[key: string]: T;
+}
+
 export class CollectionExtensions {
 
 	/**
