@@ -1,5 +1,4 @@
-﻿
-/**
+﻿/**
  * Mathematics utilities and helpers.
  * 
  * @export
