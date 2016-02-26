@@ -48,7 +48,7 @@ Install/setup the following:
 
 - NodeJS v4+
 - Visual Studio Code or similar code editor
-- TypeScript 1.7+
+- TypeScript 1.8+
 - SourceTree, SmartGit (or similar)
 - Ensure to install **global NPM modules** using the following:
 
@@ -70,8 +70,8 @@ The following process need to be executed in order to get started.
 
 ```
 npm install
+jspm install
 ```
-**NOTE: npm install will automatically install bower as if manually invoking `bower install`** 
 
 
 ## Building the code
