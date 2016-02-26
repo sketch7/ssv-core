@@ -61,7 +61,5 @@
       "core-js": "npm:core-js@^1.1.4"
     }
   },
-  "typescript": {
-    "definition": "dist/ssv-core.d.ts"
-  }
+  "typings": "dist/typings/index.d.ts"
 }
