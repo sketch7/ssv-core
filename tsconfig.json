@@ -2,8 +2,6 @@
 	"compilerOptions": {
 		"module": "amd",
 		"target": "es5",
-		"noEmitOnError": false,
-		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"declaration": true,
