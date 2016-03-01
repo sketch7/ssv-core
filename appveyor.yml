@@ -13,7 +13,7 @@ install:
   - npm install
   - jspm --version
   #- jspm config registries.github.auth %JSPM_GITHUB_AUTH_TOKEN%
-  #- jspm registry export github
+  - jspm registry export github
   - jspm install
   
 # Post-install test scripts.
