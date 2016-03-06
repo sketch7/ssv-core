@@ -82,48 +82,53 @@ export class ConversionExtensions {
 
 		switch (fromUnit) {
 			case TimeUnits.Milliseconds:
-
-				switch (toUnit) {
-					case TimeUnits.Milliseconds:
-						return value;
-					case TimeUnits.Seconds:
-						return this.fromMillisecondsToSeconds(value);
-					case TimeUnits.Minutes:
-						return this.fromMillisecondsToMinutes(value);
-					default:
-						throw Error(`convertTime of invalid toUnit '${toUnit}' `);
-				}
-
+				return this.fromMillisecondsTo(value, toUnit);
 			case TimeUnits.Seconds:
-
-				switch (toUnit) {
-					case TimeUnits.Milliseconds:
-						return this.fromSecondsToMilliseconds(value);
-					case TimeUnits.Seconds:
-						return value;
-					case TimeUnits.Minutes:
-						return this.fromSecondsToMinutes(value);
-					default:
-						throw Error(`convertTime of invalid toUnit '${toUnit}' `);
-				}
-
+				return this.fromSecondsTo(value, toUnit);
 			case TimeUnits.Minutes:
-
-				switch (toUnit) {
-					case TimeUnits.Milliseconds:
-						return this.fromMinutesToMilliseconds(value);
-					case TimeUnits.Seconds:
-						return this.fromMinutesToSeconds(value);
-					case TimeUnits.Minutes:
-						return value;
-					default:
-						throw Error(`convertTime of invalid toUnit '${toUnit}' `);
-				}
+				return this.fromMinutesTo(value, toUnit);
 			default:
 				throw Error(`convertTime of invalid fromUnit '${fromUnit}' `);
-
 		}
+	}
 
+	fromMillisecondsTo(value: number, toUnit: TimeUnits): number {
+		switch (toUnit) {
+			case TimeUnits.Milliseconds:
+				return value;
+			case TimeUnits.Seconds:
+				return this.fromMillisecondsToSeconds(value);
+			case TimeUnits.Minutes:
+				return this.fromMillisecondsToMinutes(value);
+			default:
+				throw Error(`convertTime of invalid toUnit '${toUnit}' `);
+		}
+	}
+
+	fromSecondsTo(value: number, toUnit: TimeUnits): number {
+		switch (toUnit) {
+			case TimeUnits.Milliseconds:
+				return this.fromSecondsToMilliseconds(value);
+			case TimeUnits.Seconds:
+				return value;
+			case TimeUnits.Minutes:
+				return this.fromSecondsToMinutes(value);
+			default:
+				throw Error(`convertTime of invalid toUnit '${toUnit}' `);
+		}
+	}
+
+	fromMinutesTo(value: number, toUnit: TimeUnits): number {
+		switch (toUnit) {
+			case TimeUnits.Milliseconds:
+				return this.fromMinutesToMilliseconds(value);
+			case TimeUnits.Seconds:
+				return this.fromMinutesToSeconds(value);
+			case TimeUnits.Minutes:
+				return value;
+			default:
+				throw Error(`convertTime of invalid toUnit '${toUnit}' `);
+		}
 	}
 
 }
