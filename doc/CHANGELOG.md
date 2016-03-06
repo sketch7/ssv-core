@@ -1,5 +1,16 @@
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/sketch7/ssv-core/compare/0.5.0...v0.6.0) (2016-03-06)
+
+
+### Features
+
+* **conversion:** initial implementation of conversion which has time conversions ([a294e92](https://github.com/sketch7/ssv-core/commit/a294e92))
+* **definition:** change definition witihin  package.json to use `typings` instead `typescript` to ([f70f97d](https://github.com/sketch7/ssv-core/commit/f70f97d))
+
+
+
 <a name="0.5.0"></a>
-# [0.5.0](https://github.com/sketch7/ssv-core/compare/0.4.0...v0.5.0) (2016-02-25)
+# [0.5.0](https://github.com/sketch7/ssv-core/compare/0.4.0...0.5.0) (2016-02-25)
 
 
 ### Features
