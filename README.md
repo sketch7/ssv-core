@@ -42,7 +42,6 @@ let name = utils.string.interpolate("name=:name", { name: "Chiko" });
 
 # Getting Started
 
-
 ## Setup Machine for Development
 Install/setup the following:
 
