@@ -24,16 +24,16 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 
 # Installation
 Get library via [jspm]
-```
+```bash
 jspm install ssv-core
 ```
 TypeScript Typings via [typings]
-```
+```bash
 typings install github:sketch7/ssv-core --save
 ```
 
 # Usage
-```
+```javascript
 import {utils} from "ssv-core";
 
 let name = utils.string.interpolate("name=:name", { name: "Chiko" });
@@ -52,7 +52,7 @@ Install/setup the following:
 - Ensure to install **global NPM modules** using the following:
 
 
-```
+```bash
 npm install -g git gulp typings karma-cli jspm
 ```
 
@@ -67,7 +67,7 @@ npm install -g git gulp typings karma-cli jspm
 ## Project Setup
 The following process need to be executed in order to get started.
 
-```
+```bash
 npm install
 jspm install
 ```
