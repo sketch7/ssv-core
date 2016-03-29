@@ -28,5 +28,3 @@ define(["require", "exports"], function (require, exports) {
     }());
     exports.MathExtensions = MathExtensions;
 });
-
-//# sourceMappingURL=math.js.map

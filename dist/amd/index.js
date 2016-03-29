@@ -11,5 +11,3 @@ define(["require", "exports", "./collection", "./conversion", "./enum", "./keyco
     __export(string_1);
     __export(utils_1);
 });
-
-//# sourceMappingURL=index.js.map
