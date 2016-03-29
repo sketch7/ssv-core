@@ -34,12 +34,12 @@ gulp.task("compile:ts", () => {
 	const tsResult = gulp.src([paths.src.tsd, paths.src.ts, `!${paths.src.testTs}`])
 		.pipe(plumber())
 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(tsc(tsProject));
 
 	return merge([
 		tsResult.js
-			.pipe(sourcemaps.write("."))
+			//.pipe(sourcemaps.write("."))
 			.pipe(gulp.dest(`${paths.output.artifact}/amd`)),
 		tsResult.dts.pipe(gulp.dest(`${paths.output.artifact}/typings`))
 				]);
