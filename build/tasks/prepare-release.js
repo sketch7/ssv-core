@@ -7,16 +7,17 @@ var fs = require("fs");
 
 var args = require("../args");
 var paths = require("../paths");
+var spawn = require("child_process").spawn;
 
 var publishBranch;
 gulp.task("prepare-release", (cb) => {
 	return runSequence(
 		"test",
 		"lint",
-		
+
 		"rebuild:rel",
 		"bump-version",
-	//"doc",
+		//"doc",
 		"changelog",
 		cb);
 });
@@ -26,6 +27,7 @@ gulp.task("perform-release", (cb) => {
 		"commit-changes",
 		"push-changes",
 		"create-new-tag",
+		"npm-publish",
 		cb);
 });
 
@@ -76,6 +78,11 @@ gulp.task("create-new-tag", (cb) => {
 		}
 		git.push("origin", publishBranch, { args: "--tags" }, cb);
 	});
+});
+
+gulp.task("npm-publish", function(done) {
+	spawn("npm", ["publish"], { stdio: "inherit" })
+		.on("close", done);
 });
 
 function getPackageJsonVersion() {
