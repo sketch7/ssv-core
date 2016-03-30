@@ -7,7 +7,6 @@ var fs = require("fs");
 
 var args = require("../args");
 var paths = require("../paths");
-var spawn = require("child_process").spawn;
 
 var publishBranch;
 gulp.task("prepare-release", (cb) => {
@@ -80,9 +79,16 @@ gulp.task("create-new-tag", (cb) => {
 	});
 });
 
-gulp.task("npm-publish", function(done) {
-	spawn("npm", ["publish"], { stdio: "inherit" })
-		.on("close", done);
+gulp.task("npm-publish", (cb) => {
+	const exec = require("child_process").exec;
+	exec("npm publish", (error, stdout, stderr) => {
+		if (error) {
+			return cb(error);
+		}
+		console.log(`npm publish - stdout: ${stdout}`);
+		console.log(`npm publish - stderr: ${stderr}`);
+		cb();
+	});
 });
 
 function getPackageJsonVersion() {
