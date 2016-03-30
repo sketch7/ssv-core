@@ -85,8 +85,7 @@ gulp.task("npm-publish", (cb) => {
 		if (error) {
 			return cb(error);
 		}
-		console.log(`npm publish - stdout: ${stdout}`);
-		console.log(`npm publish - stderr: ${stderr}`);
+		console.log(`npm publish - ${stdout}`);
 		cb();
 	});
 });
