@@ -2,10 +2,10 @@
 	"name": "ssv-core",
 	"main": "dist/typings/index.d.ts",
 	"ambientDependencies": {
-		"lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#e69fe60f2d6377ea4fae539493997b098f52cad1"
+		"lodash": "registry:dt/lodash#3.10.0+20160330154726"
 	},
 	"ambientDevDependencies": {
-		"jasmine-es6-promise-matchers": "github:DefinitelyTyped/DefinitelyTyped/jasmine-es6-promise-matchers/jasmine-es6-promise-matchers.d.ts#e69fe60f2d6377ea4fae539493997b098f52cad1",
-		"jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#e69fe60f2d6377ea4fae539493997b098f52cad1"
+		"jasmine": "registry:dt/jasmine#2.2.0+20160412134438",
+		"jasmine-es6-promise-matchers": "registry:dt/jasmine-es6-promise-matchers#0.0.0+20160317120654"
 	}
 }
