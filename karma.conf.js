@@ -15,9 +15,6 @@ module.exports = function (config) {
 					"es6-module-loader": "node_modules/es6-module-loader/dist/es6-module-loader.js"
 				},
 				packages: {
-					// "test/unit": {
-					// 	defaultExtension: "ts"
-					// },
 					"src": {
 						defaultExtension: "ts"
 					}
@@ -30,7 +27,6 @@ module.exports = function (config) {
 			]
 		},
 		files: [
-			//"test/unit/*.spec.ts"
 			"src/*.spec.ts"
 		],
 		exclude: [],
