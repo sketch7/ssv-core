@@ -31,7 +31,7 @@ gulp.task("rebuild:rel", (cb) => {
 // scripts
 gulp.task("compile:ts", () => {
 	const tsProject = getTscProject();
-	const tsResult = gulp.src([paths.src.tsd, paths.src.ts, `!${paths.src.testTs}`])
+	const tsResult = gulp.src([...paths.src.typings, paths.src.ts, `!${paths.src.testTs}`])
 		.pipe(plumber())
 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		//.pipe(sourcemaps.init())
@@ -63,6 +63,6 @@ gulp.task("copy-dist:scripts", () => {
 });
 
 gulp.task("copy-dist:dts", () => {
-	return gulp.src(`${paths.output.artifact}/typings/*.d.ts`)
+	return gulp.src(`${paths.output.artifact}/typings/**/*.d.ts`)
 		.pipe(gulp.dest(`${paths.output.dist}/typings`));
 });

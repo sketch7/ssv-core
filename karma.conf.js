@@ -2,7 +2,7 @@ module.exports = function (config) {
 	config.set({
 		basePath: "./",
 		frameworks: ["systemjs", "jasmine"],
-		
+
 		systemjs: {
 			configFile: "system.config.js",
 			config: {
@@ -27,6 +27,7 @@ module.exports = function (config) {
 			]
 		},
 		files: [
+			"src/**/*.spec.ts",
 			"src/*.spec.ts"
 		],
 		exclude: [],

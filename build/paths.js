@@ -13,8 +13,7 @@ module.exports = {
 	},
 	src: {
 		root: srcRoot,
-		tsd: tsdMainFile,
-		//ts: `./${srcRoot}/${pkg.name}.ts`,
+		typings: [tsdMainFile, "./jspm_packages/**/*.d.ts"],
 		ts: `./${srcRoot}/**/*.ts`,
 		testTs: `./${srcRoot}/**/*.spec.ts`,
 		karmaConfig: `karma.conf.js`
