@@ -53,4 +53,16 @@ export class StringExtensions {
 	parseBool(value: string): boolean {
 		return this.parseBoolConfig[(String(value).toLowerCase())];
 	}
+
+	/**
+	 * Replaces all occurrences with a string with the specified value.
+	 * 
+	 * @param {string} value value to search within
+	 * @param {string} search value to search for e.g. "//"
+	 * @param {string} replacement value to replace with e.g. "/"
+	 * @returns {string} Returns string with the replaced values
+	 */
+	replaceAll(value: string, search: string, replacement: string): string {
+		return value.replace(new RegExp(search, "g"), replacement);
+	};
 }
