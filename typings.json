@@ -1,10 +1,10 @@
 {
 	"name": "ssv-core",
 	"main": "dist/typings/index.d.ts",
-	"ambientDependencies": {
+	"globalDependencies": {
 		"lodash": "registry:dt/lodash#3.10.0+20160330154726"
 	},
-	"ambientDevDependencies": {
+	"globalDevDependencies": {
 		"jasmine": "registry:dt/jasmine#2.2.0+20160412134438",
 		"jasmine-es6-promise-matchers": "registry:dt/jasmine-es6-promise-matchers#0.0.0+20160317120654"
 	}
