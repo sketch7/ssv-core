@@ -1,5 +1,15 @@
+<a name="0.6.5"></a>
+## [0.6.5](https://github.com/sketch7/ssv-core/compare/0.6.4...v0.6.5) (2016-05-19)
+
+
+### Features
+
+* **string:** implemented `replaceAll` which replaces all string occurrences. ([4ddf58c](https://github.com/sketch7/ssv-core/commit/4ddf58c))
+
+
+
 <a name="0.6.4"></a>
-## [0.6.4](https://github.com/sketch7/ssv-core/compare/0.6.3...v0.6.4) (2016-03-30)
+## [0.6.4](https://github.com/sketch7/ssv-core/compare/0.6.3...0.6.4) (2016-03-30)
 
 
 

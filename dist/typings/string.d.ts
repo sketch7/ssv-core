@@ -23,4 +23,13 @@ export declare class StringExtensions {
      * @returns {boolean} true or false
      */
     parseBool(value: string): boolean;
+    /**
+     * Replaces all occurrences with a string with the specified value.
+     *
+     * @param {string} value value to search within
+     * @param {string} search value to search for e.g. "//"
+     * @param {string} replacement value to replace with e.g. "/"
+     * @returns {string} Returns string with the replaced values
+     */
+    replaceAll(value: string, search: string, replacement: string): string;
 }

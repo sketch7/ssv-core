@@ -51,6 +51,18 @@ define(["require", "exports"], function (require, exports) {
         StringExtensions.prototype.parseBool = function (value) {
             return this.parseBoolConfig[(String(value).toLowerCase())];
         };
+        /**
+         * Replaces all occurrences with a string with the specified value.
+         *
+         * @param {string} value value to search within
+         * @param {string} search value to search for e.g. "//"
+         * @param {string} replacement value to replace with e.g. "/"
+         * @returns {string} Returns string with the replaced values
+         */
+        StringExtensions.prototype.replaceAll = function (value, search, replacement) {
+            return value.replace(new RegExp(search, "g"), replacement);
+        };
+        ;
         return StringExtensions;
     }());
     exports.StringExtensions = StringExtensions;
