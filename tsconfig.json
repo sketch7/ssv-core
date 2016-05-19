@@ -7,13 +7,12 @@
 		"declaration": true,
 		"noImplicitReturns": true,
 		"noImplicitAny": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"noEmitOnError": true
 	},
 	"exclude": [
 		"node_modules",
 		"wwwroot",
-		"dist",
-		"typings/main.d.ts",
-		"typings/main"
+		"dist"
 	]
 }

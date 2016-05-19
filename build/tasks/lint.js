@@ -10,7 +10,7 @@ gulp.task("lint", () => {
 		.pipe(tslint.report(stylish, {
 			emitError: true,
 			sort: true,
-			bell: true,
+			bell: false,
 			fullPath: true
 		}));
 });

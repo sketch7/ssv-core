@@ -5,6 +5,7 @@
 [contribWiki]: ./doc/CONTRIBUTION.md
 [releaseWorkflowWiki]: ./doc/RELEASE-WORKFLOW.md
 
+[npm]: https://www.npmjs.com
 [jspm]: http://jspm.io
 [typings]: https://github.com/typings/typings
 
@@ -23,17 +24,24 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 [Change logs][changeLog] | [Project Repository][projectUri] | [Contribution guidelines][contribWiki]
 
 # Installation
+
+Get library via [npm]
+```bash
+npm install ssv-core --save
+```
+
 Get library via [jspm]
 ```bash
 jspm install ssv-core
 ```
+
 TypeScript Typings via [typings]
 ```bash
 typings install github:sketch7/ssv-core --save
 ```
 
 # Usage
-```javascript
+```ts
 import {utils} from "ssv-core";
 
 let name = utils.string.interpolate("name=:name", { name: "Chiko" });
