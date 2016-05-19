@@ -3,8 +3,8 @@
 export class StringExtensions {
 
 	/**
-	 * parseBool configuration to add/remove possible values. 
-	 * 
+	 * parseBool configuration to add/remove possible values.
+	 *
 	 * @type {Dictionary<boolean>}
 	 */
 	parseBoolConfig: Dictionary<boolean> = {
@@ -56,7 +56,7 @@ export class StringExtensions {
 
 	/**
 	 * Replaces all occurrences with a string with the specified value.
-	 * 
+	 *
 	 * @param {string} value value to search within
 	 * @param {string} search value to search for e.g. "//"
 	 * @param {string} replacement value to replace with e.g. "/"
