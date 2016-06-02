@@ -5,26 +5,41 @@ const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 const merge = require("merge2");
 
+const args = require("../args");
 const paths = require("../paths");
 
 gulp.task("build", (cb) => {
+	if (args.isRelease) {
+		return runSeq(
+			["lint", "compile:ts"],
+			"copy-dist",
+			cb);
+	}
+
 	return runSeq(
-		["compile:ts"],
+		["lint", "compile:ts"],
 		cb);
 });
 
 gulp.task("rebuild", (cb) => {
+	if (args.isRelease) {
+		return runSeq(
+			"clean",
+			"build",
+			"copy-dist",
+			cb);
+	}
+
 	return runSeq(
 		"clean:artifact",
 		"build",
 		cb);
 });
 
-gulp.task("rebuild:rel", (cb) => {
+gulp.task("ci", (cb) => {
 	return runSeq(
-		"clean",
-		"build",
-		"copy-dist",
+		"rebuild",
+		"test",
 		cb);
 });
 
