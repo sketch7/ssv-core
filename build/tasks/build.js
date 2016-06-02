@@ -15,7 +15,6 @@ gulp.task("build", (cb) => {
 			"copy-dist",
 			cb);
 	}
-
 	return runSeq(
 		["lint", "compile:ts"],
 		cb);
@@ -29,7 +28,6 @@ gulp.task("rebuild", (cb) => {
 			"copy-dist",
 			cb);
 	}
-
 	return runSeq(
 		"clean:artifact",
 		"build",
