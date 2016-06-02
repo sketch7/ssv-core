@@ -116,4 +116,4 @@ gulp tdd
 ```
 gulp prepare-release --bump major|minor|patch|prerelease (default: patch)
 ```
-Check out the [release workflow guide][releaseWorkflowWiki] in order to guide you creating a release and distributing it.
+Check out the [release workflow guide][releaseWorkflowWiki] in order to guide you creating a release and publishing it.

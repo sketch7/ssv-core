@@ -29,11 +29,10 @@ gulp.task("perform-release", (cb) => {
 });
 
 gulp.task("publish", (cb) => {
+	if (args.isRelease) {
+		return publish(null, "HEAD", cb);
+	}
 	return publish("prerelease", "HEAD", cb);
-});
-
-gulp.task("publish:rel", (cb) => {
-	return publish(null, "HEAD", cb);
 });
 
 // utils
