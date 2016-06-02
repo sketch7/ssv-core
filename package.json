@@ -44,6 +44,9 @@
     "yargs": "^4.7.1"
   },
   "dependencies": {},
+  "peerDependencies": {
+	  "lodash": "^4.0.0"
+  },
   "jspm": {
     "registry": "jspm",
     "main": "amd/index",
