@@ -67,3 +67,5 @@ define(["require", "exports"], function (require, exports) {
     }());
     exports.StringExtensions = StringExtensions;
 });
+
+//# sourceMappingURL=string.js.map

@@ -31,3 +31,5 @@ define(["require", "exports", "lodash"], function (require, exports, _) {
     }());
     exports.EnumExtensions = EnumExtensions;
 });
+
+//# sourceMappingURL=enum.js.map
