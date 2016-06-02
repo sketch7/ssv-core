@@ -5,7 +5,7 @@ node_modules
 
 _artifact
 build
-typings
+/typings
 .bithoundrc
 .editorconfig
 .gitignore
@@ -18,3 +18,4 @@ system.config.js
 tsconfig.json
 tslint.json
 typings.json
+wallaby.js

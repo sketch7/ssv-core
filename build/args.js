@@ -1,16 +1,18 @@
 var yargs = require("yargs");
 
-var argv = yargs.argv,
-	validBumpTypes = "major|minor|patch|prerelease".split("|"),
-	bump = (argv.bump || "patch").toLowerCase();
+var argv = yargs
+	.alias("rel", "release")
+	.default("rel", false)
 
-if (validBumpTypes.indexOf(bump) === -1) {
-	throw new Error(`Unrecognized bump "${bump}".`);
-}
+	.choices("bump", ["major", "minor", "patch", "prerelease"])
+	.default("bump", "patch")
 
-var versionSuffix = (argv.versionSuffix || "rc" ).toLowerCase();
+	.default("versionSuffix", "rc")
+
+	.argv;
 
 module.exports = {
-	bump: bump,
-	versionSuffix: versionSuffix
+	bump: argv.bump,
+	versionSuffix: argv.versionSuffix,
+	isRelease: argv.rel
 };

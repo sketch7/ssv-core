@@ -5,26 +5,39 @@ const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 const merge = require("merge2");
 
+const args = require("../args");
 const paths = require("../paths");
 
 gulp.task("build", (cb) => {
+	if (args.isRelease) {
+		return runSeq(
+			["lint", "compile:ts"],
+			"copy-dist",
+			cb);
+	}
 	return runSeq(
-		["compile:ts"],
+		["lint", "compile:ts"],
 		cb);
 });
 
 gulp.task("rebuild", (cb) => {
+	if (args.isRelease) {
+		return runSeq(
+			"clean",
+			"build",
+			"copy-dist",
+			cb);
+	}
 	return runSeq(
 		"clean:artifact",
 		"build",
 		cb);
 });
 
-gulp.task("rebuild:rel", (cb) => {
+gulp.task("ci", (cb) => {
 	return runSeq(
-		"clean",
-		"build",
-		"copy-dist",
+		"rebuild",
+		"test",
 		cb);
 });
 
@@ -33,36 +46,27 @@ gulp.task("compile:ts", () => {
 	const tsProject = getTscProject();
 	const tsResult = gulp.src([...paths.src.typings, paths.src.ts, `!${paths.src.testTs}`])
 		.pipe(plumber())
-	//.pipe(changed(paths.output.dist, { extension: ".js" }))
-		//.pipe(sourcemaps.init())
+		//.pipe(changed(paths.output.dist, { extension: ".js" }))
+		.pipe(sourcemaps.init())
 		.pipe(tsc(tsProject));
 
 	return merge([
 		tsResult.js
-			//.pipe(sourcemaps.write("."))
+			.pipe(sourcemaps.write("."))
 			.pipe(gulp.dest(`${paths.output.artifact}/amd`)),
-		tsResult.dts.pipe(gulp.dest(`${paths.output.artifact}/typings`))
-				]);
+		tsResult.dts
+			.pipe(gulp.dest(`${paths.output.artifact}/typings`))
+	]);
+});
+
+gulp.task("copy-dist", () => {
+	return gulp.src(`${paths.output.artifact}/**/*`)
+		.pipe(gulp.dest(`${paths.output.dist}`));
 });
 
 function getTscProject() {
 	return tsc.createProject("tsconfig.json", {
-		typescript: require("typescript"),
+		typescript: require("typescript")
 		//outFile: `${paths.packageName}.js`
 	});
 }
-
-// copy-dist
-gulp.task("copy-dist", () => {
-	return runSeq(["copy-dist:scripts", "copy-dist:dts"]);
-});
-
-gulp.task("copy-dist:scripts", () => {
-	return gulp.src(`${paths.output.artifact}/amd/**/*.js`)
-		.pipe(gulp.dest(`${paths.output.dist}/amd`));
-});
-
-gulp.task("copy-dist:dts", () => {
-	return gulp.src(`${paths.output.artifact}/typings/**/*.d.ts`)
-		.pipe(gulp.dest(`${paths.output.dist}/typings`));
-});

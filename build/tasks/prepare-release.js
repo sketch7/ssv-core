@@ -10,11 +10,9 @@ var paths = require("../paths");
 
 var publishBranch;
 gulp.task("prepare-release", (cb) => {
+	args.isRelease = true;
 	return runSequence(
-		"test",
-		"lint",
-
-		"rebuild:rel",
+		"ci",
 		"bump-version",
 		//"doc",
 		"changelog",
