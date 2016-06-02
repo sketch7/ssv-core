@@ -28,7 +28,7 @@ RC release process
 ## New Stable Release
 Stable release process
  - Checkout `master`
- - Run `gulp publish:rel --bump major|minor|patch (default: patch)`
+ - Run `gulp publish --rel --bump major|minor|patch (default: patch)`
  - Merge `master => develop`
 
 
@@ -44,7 +44,7 @@ gulp publish
 ### Publish Rel
 Quick publish a stable release, this will prepare release and commit.
 ```
-gulp publish:rel --bump major|minor|patch|prerelease (default: patch)
+gulp publish --rel --bump major|minor|patch|prerelease (default: patch)
 ```
 
 ### Prepare-Release
