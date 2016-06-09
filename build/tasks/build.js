@@ -6,7 +6,7 @@ const plumber = require("gulp-plumber");
 const merge = require("merge2");
 
 const args = require("../args");
-const paths = require("../paths");
+const config = require("../config");
 
 gulp.task("build", (cb) => {
 	if (args.isRelease) {
@@ -44,7 +44,7 @@ gulp.task("ci", (cb) => {
 // scripts
 gulp.task("compile:ts", () => {
 	const tsProject = getTscProject();
-	const tsResult = gulp.src([...paths.src.typings, paths.src.ts, `!${paths.src.testTs}`])
+	const tsResult = gulp.src([...config.src.typings, config.src.ts, `!${config.src.testTs}`])
 		.pipe(plumber())
 		//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())
@@ -53,15 +53,15 @@ gulp.task("compile:ts", () => {
 	return merge([
 		tsResult.js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(`${paths.output.artifact}/amd`)),
+			.pipe(gulp.dest(`${config.output.artifact}/amd`)),
 		tsResult.dts
-			.pipe(gulp.dest(`${paths.output.artifact}/typings`))
+			.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	]);
 });
 
 gulp.task("copy-dist", () => {
-	return gulp.src(`${paths.output.artifact}/**/*`)
-		.pipe(gulp.dest(`${paths.output.dist}`));
+	return gulp.src(`${config.output.artifact}/**/*`)
+		.pipe(gulp.dest(`${config.output.dist}`));
 });
 
 function getTscProject() {

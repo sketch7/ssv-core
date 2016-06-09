@@ -1,12 +1,12 @@
-var gulp = require("gulp");
-var runSequence = require("run-sequence");
-var conventionalChangelog = require("gulp-conventional-changelog");
-var bump = require("gulp-bump");
-var git = require("gulp-git");
-var fs = require("fs");
+const gulp = require("gulp");
+const runSequence = require("run-sequence");
+const conventionalChangelog = require("gulp-conventional-changelog");
+const bump = require("gulp-bump");
+const git = require("gulp-git");
+const fs = require("fs");
 
-var args = require("../args");
-var paths = require("../paths");
+const args = require("../args");
+const config = require("../config");
 
 var publishBranch;
 gulp.task("prepare-release", (cb) => {
@@ -45,14 +45,14 @@ gulp.task("bump-version", () => {
 });
 
 gulp.task("changelog", () => {
-	return gulp.src(`${paths.doc}/CHANGELOG.md`, {
+	return gulp.src(`${config.doc}/CHANGELOG.md`, {
 		buffer: false
 	})
 		.pipe(conventionalChangelog({
 			preset: "angular",
 			releaseCount: 0
 		}))
-		.pipe(gulp.dest(`${paths.doc}`));
+		.pipe(gulp.dest(`${config.doc}`));
 });
 
 gulp.task("commit-changes", () => {

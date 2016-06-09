@@ -71,7 +71,10 @@
 			"double"
 		],
 		"radix": true,
-		"semicolon": [true, "always"],
+		"semicolon": [
+			true,
+			"always"
+		],
 		"triple-equals": [
 			true,
 			"allow-null-check"
@@ -92,7 +95,8 @@
 			"check-branch",
 			"check-decl",
 			"check-operator",
-			"check-separator",
+			"check-module",
+			"check-seperator",
 			"check-type"
 		]
 	}

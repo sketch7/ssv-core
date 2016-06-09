@@ -38,8 +38,8 @@
     "merge2": "^1.0.2",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1",
-    "systemjs": "^0.19.29",
-    "tslint": "^3.10.2",
+    "systemjs": "^0.19.30",
+    "tslint": "^3.11.0",
     "typescript": "^1.8.10",
     "yargs": "^4.7.1"
   },

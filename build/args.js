@@ -1,4 +1,6 @@
-var yargs = require("yargs");
+const yargs = require("yargs");
+
+const config = require("./config");
 
 var argv = yargs
 	.alias("rel", "release")
@@ -8,11 +10,15 @@ var argv = yargs
 	.default("bump", "patch")
 
 	.default("versionSuffix", "rc")
+	.default("reporters", config.test.reporters)
+	.default("browsers", config.test.browsers)
 
 	.argv;
 
 module.exports = {
 	bump: argv.bump,
 	versionSuffix: argv.versionSuffix,
-	isRelease: argv.rel
+	isRelease: argv.rel,
+	reporters: argv.reporters,
+	browsers: [].concat(argv.browsers)
 };

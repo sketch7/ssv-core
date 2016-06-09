@@ -9,7 +9,6 @@ describe("ConversionExtensionsSpecs", () => {
 		describe("given time in milliseconds", () => {
 
 			it("should be converted to seconds", () => {
-
 				let result = SUT.fromMillisecondsToSeconds(21000);
 				expect(result).toBe(21);
 			});
@@ -23,7 +22,6 @@ describe("ConversionExtensionsSpecs", () => {
 		describe("given time in milliseconds", () => {
 
 			it("should be converted to minutes", () => {
-
 				let result = SUT.fromMillisecondsToMinutes(75000);
 				expect(result).toBe(1.25);
 			});
@@ -37,7 +35,6 @@ describe("ConversionExtensionsSpecs", () => {
 		describe("given time in seconds", () => {
 
 			it("should be converted to milliseconds", () => {
-
 				let result = SUT.fromSecondsToMilliseconds(2.5);
 				expect(result).toBe(2500);
 			});
@@ -51,7 +48,6 @@ describe("ConversionExtensionsSpecs", () => {
 		describe("given time in seconds", () => {
 
 			it("should be converted to minutes", () => {
-
 				let result = SUT.fromSecondsToMinutes(75);
 				expect(result).toBe(1.25);
 			});
@@ -65,7 +61,6 @@ describe("ConversionExtensionsSpecs", () => {
 		describe("given time in minutes", () => {
 
 			it("should be converted to milliseconds", () => {
-
 				let result = SUT.fromMinutesToMilliseconds(2.5);
 				expect(result).toBe(150000);
 			});
@@ -79,7 +74,6 @@ describe("ConversionExtensionsSpecs", () => {
 		describe("given time in minutes", () => {
 
 			it("should be converted to seconds", () => {
-
 				let result = SUT.fromMinutesToSeconds(1.25);
 				expect(result).toBe(75);
 			});
