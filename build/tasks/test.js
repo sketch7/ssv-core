@@ -1,8 +1,10 @@
-var config = require("../paths");
-var gulp = require("gulp");
-var gutil = require("gulp-util");
-var Karma = require("karma").Server;
-var path = require("path");
+const gulp = require("gulp");
+const gutil = require("gulp-util");
+const Karma = require("karma").Server;
+const path = require("path");
+
+const config = require("../config");
+var args = require("../args");
 
 gulp.task("test", (cb) => {
 	runTests(true, cb);
@@ -13,11 +15,13 @@ gulp.task("tdd", (cb) => {
 });
 
 function runTests(singleRun, cb) {
-
+gutil.log(gutil.colors.cyan(`Launching Karma... Reporters '${args.reporters}' ; Browsers '${args.browsers}'`));
 	new Karma({
 		configFile: path.join(__dirname, `../../${config.src.karmaConfig}`),
 		singleRun: singleRun,
-		autoWatch: !singleRun
+		autoWatch: !singleRun,
+		reporters: args.reporters,
+		browsers: args.browsers
 	}, (code) => {
 
 		// make sure failed karma tests cause gulp to exit non-zero

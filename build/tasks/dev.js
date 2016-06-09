@@ -3,12 +3,12 @@ const util = require("gulp-util");
 const runSeq = require("run-sequence");
 
 const args = require("../args");
-const paths = require("../paths");
+const config = require("../config");
 
 gulp.task("watch", () => {
 	if (args.isRelease) {
 		// ts
-		gulp.watch(paths.src.ts, () => {
+		gulp.watch([config.src.ts, `!${config.src.testTs}`], () => {
 			return runSeq(
 				"compile:ts",
 				"copy-dist"
@@ -17,7 +17,7 @@ gulp.task("watch", () => {
 			.on("error", swallowError);
 	} else {
 		// ts
-		gulp.watch(paths.src.ts, ["compile:ts"])
+		gulp.watch([config.src.ts, `!${config.src.testTs}`], ["compile:ts"])
 			.on("change", reportChange)
 			.on("error", swallowError);
 	}

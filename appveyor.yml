@@ -23,7 +23,7 @@ test_script:
   - npm --version
   # run tests
   - gulp lint
-  - gulp test
+  - gulp test --reporters mocha,appvayor
 
 # Don't actually build.
 build: off

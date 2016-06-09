@@ -1,14 +1,14 @@
 const gulp = require("gulp");
 const del = require("del");
 
-const paths = require("../paths");
+const config = require("../config");
 
 gulp.task("clean", ["clean:artifact", "clean:dist"]);
 
 gulp.task("clean:artifact", () => {
-	return del(paths.output.artifact);
+	return del(config.output.artifact);
 });
 
 gulp.task("clean:dist", () => {
-	return del(paths.output.dist);
+	return del(config.output.dist);
 });

@@ -1,10 +1,11 @@
 const gulp = require("gulp");
-const paths = require("./paths");
+
+const config = require("./config");
 
 require("require-dir")("./tasks");
 
 gulp.task("default", () => {
 
-	console.log(`======== ${paths.packageName} ========`);
+	console.log(`======== ${config.packageName} ========`);
 
 });
