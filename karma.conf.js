@@ -24,11 +24,12 @@ module.exports = function (config) {
 				transpiler: "typescript"
 			},
 			serveFiles: [
+				conf.src.ts,
 				"jspm_packages/**/*.js"
 			]
 		},
 		files: [
-			conf.src.ts,
+			conf.src.testTs,
 			"src/*.spec.ts"
 		],
 		exclude: [],
