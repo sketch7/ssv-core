@@ -25,7 +25,6 @@ gulp.task("rebuild", (cb) => {
 		return runSeq(
 			"clean",
 			"build",
-			"copy-dist",
 			cb);
 	}
 	return runSeq(
