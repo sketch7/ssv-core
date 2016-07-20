@@ -53,10 +53,10 @@ let name = utils.string.interpolate("name=:name", { name: "Chiko" });
 ## Setup Machine for Development
 Install/setup the following:
 
-- NodeJS v4+
+- NodeJS v5+
 - Visual Studio Code or similar code editor
 - TypeScript 1.8+
-- SourceTree, SmartGit (or similar)
+- Git + SourceTree, SmartGit or similar (optional)
 - Ensure to install **global NPM modules** using the following:
 
 
@@ -67,10 +67,8 @@ npm install -g git gulp typings karma-cli jspm
 
 ### Cloning Repo
 
-- Open SourceTree
-- Clone project repo from [project git][projectGit]
+- Run `git clone https://github.com/sketch7/ssv-core.git`
 - Switch to `develop` branch
-
 
 ## Project Setup
 The following process need to be executed in order to get started.
