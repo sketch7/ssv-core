@@ -1,8 +1,0 @@
-{
-  "resolution": "main",
-  "tree": {
-    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/7de6c3dd94feaeb21f20054b9f30d5dabc5efabd/jasmine-es6-promise-matchers/jasmine-es6-promise-matchers.d.ts",
-    "raw": "registry:dt/jasmine-es6-promise-matchers#0.0.0+20160317120654",
-    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/7de6c3dd94feaeb21f20054b9f30d5dabc5efabd/jasmine-es6-promise-matchers/jasmine-es6-promise-matchers.d.ts"
-  }
-}

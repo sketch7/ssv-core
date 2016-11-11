@@ -27,22 +27,13 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 
 Get library via [npm]
 ```bash
-npm install ssv-core --save
-```
-
-Get library via [jspm]
-```bash
-jspm install ssv-core
-```
-
-TypeScript Typings via [typings]
-```bash
-typings install github:sketch7/ssv-core --save
+npm install @ssv/core --save
 ```
 
 # Usage
+
 ```ts
-import {utils} from "ssv-core";
+import { utils } from "ssv-core";
 
 let name = utils.string.interpolate("name=:name", { name: "Chiko" });
 ```
@@ -53,22 +44,21 @@ let name = utils.string.interpolate("name=:name", { name: "Chiko" });
 ## Setup Machine for Development
 Install/setup the following:
 
-- NodeJS v4+
+- NodeJS v6+
 - Visual Studio Code or similar code editor
-- TypeScript 1.8+
-- SourceTree, SmartGit (or similar)
+- TypeScript 2.0+
+- Git + SourceTree, SmartGit or similar (optional)
 - Ensure to install **global NPM modules** using the following:
 
 
 ```bash
-npm install -g git gulp typings karma-cli jspm
+npm install -g git gulp karma-cli
 ```
 
 
 ### Cloning Repo
 
-- Open SourceTree
-- Clone project repo from [project git][projectGit]
+- Run `git clone https://github.com/sketch7/ssv-core.git`
 - Switch to `develop` branch
 
 
@@ -77,7 +67,6 @@ The following process need to be executed in order to get started.
 
 ```bash
 npm install
-jspm install
 ```
 
 

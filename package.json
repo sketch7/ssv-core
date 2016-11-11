@@ -1,5 +1,5 @@
 {
-  "name": "ssv-core",
+  "name": "@ssv/core",
   "version": "0.7.0",
   "description": "ssv core components, utilities and services",
   "keywords": [
@@ -9,60 +9,44 @@
   ],
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",
-  "main": "dist/amd/index.js",
+  "main": "dist/umd/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "del": "^2.2.0",
+    "@types/jasmine": "^2.5.37",
+    "@types/lodash": "^4.14.38",
+    "del": "^2.2.2",
     "es6-module-loader": "^0.17.11",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.1.0",
     "gulp-conventional-changelog": "^1.1.0",
-    "gulp-git": "^1.7.2",
+    "gulp-git": "^1.12.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sourcemaps": "^2.0.0-alpha",
-    "gulp-tslint": "^5.0.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-tslint": "^6.1.3",
     "gulp-tslint-stylish": "^1.1.1",
-    "gulp-typescript": "^2.13.6",
+    "gulp-typescript": "^3.1.2",
     "gulp-util": "^3.0.7",
-    "jasmine-core": "^2.4.1",
-    "jspm": "^0.16.36",
-    "karma": "^0.13.22",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
     "karma-appveyor-reporter": "^0.3.0",
-    "karma-chrome-launcher": "^1.0.1",
+    "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
-    "karma-mocha-reporter": "^2.0.3",
-    "karma-systemjs": "^0.13.0",
+    "karma-mocha-reporter": "^2.2.0",
+    "karma-systemjs": "^0.15.0",
     "merge2": "^1.0.2",
-    "require-dir": "^0.3.0",
-    "run-sequence": "^1.2.1",
-    "systemjs": "^0.19.30",
-    "tslint": "^3.11.0",
-    "typescript": "^1.8.10",
-    "yargs": "^4.7.1"
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "systemjs": "^0.19.41",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.9",
+    "yargs": "^6.3.0"
   },
   "dependencies": {},
   "peerDependencies": {
-	  "lodash": "^4.0.0"
-  },
-  "jspm": {
-    "registry": "jspm",
-    "main": "amd/index",
-    "format": "amd",
-    "directories": {
-      "dist": "dist"
-    },
-    "configFile": "system.config.js",
-    "dependencies": {
-      "lodash": "npm:lodash@^4.0.0"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
-    }
+    "lodash": "^4.0.0"
   },
   "typings": "dist/typings/index.d.ts"
 }

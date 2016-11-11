@@ -6,21 +6,22 @@ const args = require("../args");
 const config = require("../config");
 
 gulp.task("watch", () => {
-	if (args.isRelease) {
-		// ts
-		gulp.watch([config.src.ts, `!${config.src.testTs}`], () => {
+
+	// ts
+	gulp.watch([config.src.ts, `!${config.src.testTs}`], () => {
+		if (args.isRelease) {
 			return runSeq(
 				"compile:ts",
 				"copy-dist"
 			);
-		}).on("change", reportChange)
-			.on("error", swallowError);
-	} else {
-		// ts
-		gulp.watch([config.src.ts, `!${config.src.testTs}`], ["compile:ts"])
-			.on("change", reportChange)
-			.on("error", swallowError);
-	}
+		} else {
+			return runSeq(
+				"compile:ts"
+			);
+		}
+	}).on("change", reportChange)
+		.on("error", swallowError);
+
 });
 
 function reportChange(event) {

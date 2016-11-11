@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
-		"module": "amd",
+		"module": "umd",
 		"target": "es5",
+		"moduleResolution": "node",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"declaration": true,
@@ -10,9 +11,9 @@
 		"noFallthroughCasesInSwitch": true,
 		"noEmitOnError": true
 	},
-	"exclude": [
-		"node_modules",
-		"wwwroot",
-		"dist"
+	"include": [
+		"src/**/*",
+		"test/**/*",
+		"node_modules/@types/**/*.d.ts"
 	]
 }
