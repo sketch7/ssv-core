@@ -1,4 +1,4 @@
-﻿import {Dictionary} from "./collection";
+﻿import { Dictionary } from "./collection";
 
 export class StringExtensions {
 

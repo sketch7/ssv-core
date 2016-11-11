@@ -1,4 +1,4 @@
-﻿import {CollectionExtensions, Selectable} from "./collection";
+﻿import { CollectionExtensions, Selectable } from "./collection";
 
 interface SelectableMock extends Selectable {
 	key: string;

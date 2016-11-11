@@ -1,4 +1,4 @@
-import {MathExtensions} from "./math";
+import { MathExtensions } from "./math";
 
 describe("MathExtensionsSpecs", () => {
 

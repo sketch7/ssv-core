@@ -1,4 +1,4 @@
-import {StringExtensions} from "./string";
+import { StringExtensions } from "./string";
 
 describe("StringExtensionsSpecs", () => {
 

@@ -1,4 +1,4 @@
-﻿import {EnumExtensions} from "./enum";
+﻿import { EnumExtensions } from "./enum";
 
 enum CharacterStatus {
 	Elite = 1,

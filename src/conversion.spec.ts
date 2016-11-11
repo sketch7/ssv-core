@@ -1,4 +1,4 @@
-import {ConversionExtensions, TimeUnits} from "./conversion";
+import { ConversionExtensions, TimeUnits } from "./conversion";
 
 describe("ConversionExtensionsSpecs", () => {
 
