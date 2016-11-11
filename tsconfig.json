@@ -9,11 +9,13 @@
 		"noImplicitReturns": true,
 		"noImplicitAny": true,
 		"noFallthroughCasesInSwitch": true,
-		"noEmitOnError": true
+		"noEmitOnError": true,
+		"types": [
+			"jasmine"
+		]
 	},
 	"include": [
 		"src/**/*",
-		"test/**/*",
-		"node_modules/@types/**/*.d.ts"
+		"test/**/*"
 	]
 }
