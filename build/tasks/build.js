@@ -44,7 +44,7 @@ gulp.task("ci", (cb) => {
 // scripts
 gulp.task("compile:ts", () => {
 	const tsProject = getTscProject();
-	const tsResult = gulp.src([...config.src.typings, config.src.ts, `!${config.src.testTs}`])
+	const tsResult = gulp.src([config.src.ts, `!${config.src.testTs}`])
 		.pipe(plumber())
 		//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())
@@ -53,7 +53,7 @@ gulp.task("compile:ts", () => {
 	return merge([
 		tsResult.js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(`${config.output.artifact}/amd`)),
+			.pipe(gulp.dest(`${config.output.artifact}/umd`)),
 		tsResult.dts
 			.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	]);
