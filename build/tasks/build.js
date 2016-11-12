@@ -66,7 +66,7 @@ gulp.task("copy-dist", () => {
 
 function getTscProject() {
 	return tsc.createProject("tsconfig.json", {
-		typescript: require("typescript")
-		//outFile: `${paths.packageName}.js`
+		typescript: require("typescript"),
+		// outFile: `${config.packageName}.js`
 	});
 }
