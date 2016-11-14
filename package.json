@@ -1,6 +1,6 @@
 {
   "name": "ssv-core",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -45,7 +45,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-	  "lodash": "^4.0.0"
+    "lodash": "^4.0.0"
   },
   "jspm": {
     "registry": "jspm",
