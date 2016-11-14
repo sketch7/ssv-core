@@ -1,6 +1,25 @@
-<a name="0.6.4"></a>
-## [0.6.4](https://github.com/sketch7/ssv-core/compare/0.6.3...v0.6.4) (2016-03-30)
+<a name="0.7.2"></a>
+## [0.7.2](https://github.com/sketch7/ssv-core/compare/0.7.0...v0.7.2) (2016-11-14)
 
+
+
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/sketch7/ssv-core/compare/0.6.5...0.7.0) (2016-06-02)
+
+
+
+<a name="0.6.5"></a>
+## [0.6.5](https://github.com/sketch7/ssv-core/compare/0.6.4...0.6.5) (2016-05-19)
+
+
+### Features
+
+* **string:** implemented `replaceAll` which replaces all string occurrences. ([4ddf58c](https://github.com/sketch7/ssv-core/commit/4ddf58c))
+
+
+
+<a name="0.6.4"></a>
+## [0.6.4](https://github.com/sketch7/ssv-core/compare/0.6.3...0.6.4) (2016-03-30)
 
 
 
@@ -9,10 +28,8 @@
 
 
 
-
 <a name="0.6.1"></a>
 ## [0.6.1](https://github.com/sketch7/ssv-core/compare/0.6.0...0.6.1) (2016-03-29)
-
 
 
 
@@ -23,7 +40,7 @@
 ### Features
 
 * **conversion:** initial implementation of conversion which has time conversions ([a294e92](https://github.com/sketch7/ssv-core/commit/a294e92))
-* **definition:** change definition witihin  package.json to use `typings` instead `typescript` to ([f70f97d](https://github.com/sketch7/ssv-core/commit/f70f97d))
+* **definition:** change definition witihin  package.json to use `typings` instead `typescript` to point to definition ([f70f97d](https://github.com/sketch7/ssv-core/commit/f70f97d))
 
 
 
@@ -44,20 +61,18 @@
 
 
 
-
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.1...0.3.0) (2016-02-21)
 
 
 ### Bug Fixes
 
-* **package:** package has been changed from bundled to unbundled due to issues with jspm when  ([eb076ac](https://github.com/sketch7/ssv-core/commit/eb076ac))
+* **package:** package has been changed from bundled to unbundled due to issues with jspm when installing ([eb076ac](https://github.com/sketch7/ssv-core/commit/eb076ac))
 
 
 
 <a name="0.2.1-rc.1"></a>
 ## [0.2.1-rc.1](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.0...0.2.1-rc.1) (2016-02-21)
-
 
 
 
@@ -76,10 +91,8 @@
 
 
 
-
 <a name="0.1.6-rc.3"></a>
 ## [0.1.6-rc.3](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.2...0.1.6-rc.3) (2016-02-19)
-
 
 
 
@@ -103,10 +116,8 @@
 
 
 
-
 <a name="0.1.5-1"></a>
 ## [0.1.5-1](https://github.com/sketch7/ssv-core/compare/0.1.4...0.1.5-1) (2016-02-17)
-
 
 
 
@@ -115,16 +126,13 @@
 
 
 
-
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/sketch7/ssv-core/compare/0.1.2...0.1.3) (2016-02-08)
 
 
 
-
 <a name="0.1.2"></a>
 ## 0.1.2 (2016-02-08)
-
 
 
 

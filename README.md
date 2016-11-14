@@ -15,6 +15,9 @@
 [![bitHound Overall Score](https://www.bithound.io/github/sketch7/ssv-core/badges/score.svg)](https://www.bithound.io/github/sketch7/ssv-core)
 [![npm version](https://badge.fury.io/js/ssv-core.svg)](https://badge.fury.io/js/ssv-core)
 
+# Deprecated!
+Instead use [@ssv/core](https://www.npmjs.com/package/@ssv/core)
+
 ssv core components, utilities and services
 
 In order to contribute please read the [Contribution guidelines][contribWiki].
