@@ -1,15 +1,20 @@
 {
   "name": "@ssv/core",
-  "version": "0.7.0",
+  "version": "0.1.0",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
     "core",
     "utils"
   ],
+  "scripts": {
+    "test": "gulp test",
+    "lint": "gulp lint",
+    "build": "gulp build"
+  },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",
-  "main": "dist/umd/index.js",
+  "main": "dist/amd/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sketch7/ssv-core"
