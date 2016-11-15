@@ -1,8 +1,6 @@
-import { StringExtensions } from "./string";
+import * as SUT from "./string";
 
 describe("StringExtensionsSpecs", () => {
-
-	let SUT = new StringExtensions();
 
 	describe("interpolateSpecs", () => {
 

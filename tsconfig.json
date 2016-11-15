@@ -12,6 +12,10 @@
 		"noEmitOnError": true,
 		"types": [
 			"jasmine"
+		],
+		"lib": [
+			"es2015",
+			"dom"
 		]
 	},
 	"include": [
