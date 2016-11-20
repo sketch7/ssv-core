@@ -1,6 +1,6 @@
 import * as SUT from "./string";
 
-describe("StringExtensionsSpecs", () => {
+describe("String Utils", () => {
 
 	describe("interpolateSpecs", () => {
 

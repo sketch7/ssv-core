@@ -1,4 +1,4 @@
-﻿import { EnumExtensions } from "./enum";
+﻿import * as SUT from "./enum";
 
 enum CharacterStatus {
 	Elite = 1,
@@ -8,9 +8,7 @@ enum CharacterStatus {
 }
 
 
-describe("EnumExtensions", () => {
-
-	let SUT = new EnumExtensions();
+describe("Enum Utils", () => {
 
 	describe("getNamesSpecs", () => {
 

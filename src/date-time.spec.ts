@@ -1,8 +1,7 @@
-import { ConversionExtensions, TimeUnits } from "./conversion";
+import * as SUT from "./date-time";
+import { TimeUnits } from "./date-time";
 
-describe("ConversionExtensionsSpecs", () => {
-
-	let SUT = new ConversionExtensions();
+describe("DateTime Utils", () => {
 
 	describe("fromMillisecondsToSecondsSpecs", () => {
 

@@ -1,8 +1,6 @@
-import { MathExtensions } from "./math";
+import * as SUT from "./math";
 
-describe("MathExtensionsSpecs", () => {
-
-	let SUT = new MathExtensions();
+describe("Math Utils", () => {
 
 	describe("roundSpecs", () => {
 

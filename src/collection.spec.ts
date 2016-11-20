@@ -1,12 +1,11 @@
-﻿import { CollectionExtensions, Selectable } from "./collection";
+﻿import * as SUT from "./collection";
+import { Selectable } from "./collection";
 
 interface SelectableMock extends Selectable {
 	key: string;
 }
 
-describe("CollectionExtensionsSpecs", () => {
-
-	let SUT = new CollectionExtensions();
+describe("Collection Utils", () => {
 
 	describe("mutualExclusiveSelectSpec", () => {
 		let mockSelectableCollection: SelectableMock[];

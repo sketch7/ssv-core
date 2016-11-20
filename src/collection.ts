@@ -9,19 +9,16 @@ export interface Dictionary<T> {
 	[key: string]: T;
 }
 
-export class CollectionExtensions {
+/**
+ * Unselect all collection items and select only the item specified.
+ * @param {Selectable[]} collection collection to unselect.
+ * @param {Selectable} selectItem item to select.
+ */
+export function mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void {
 
-	/**
-	 * Unselect all collection items and select only the item specified.
-	 * @param {Selectable[]} collection collection to unselect.
-	 * @param {Selectable} selectItem item to select.
-	 */
-	mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void {
-
-		for (let item of collection) {
-			item.isSelected = false;
-		}
-
-		selectItem.isSelected = true;
+	for (let item of collection) {
+		item.isSelected = false;
 	}
+
+	selectItem.isSelected = true;
 }
