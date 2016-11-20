@@ -6,8 +6,6 @@
 [releaseWorkflowWiki]: ./doc/RELEASE-WORKFLOW.md
 
 [npm]: https://www.npmjs.com
-[jspm]: http://jspm.io
-[typings]: https://github.com/typings/typings
 
 # ssv-core
 [![Build status](https://ci.appveyor.com/api/projects/status/2e0an5hvxtfs08mf?svg=true)](https://ci.appveyor.com/project/chiko/ssv-core)
@@ -33,9 +31,9 @@ npm install @ssv/core --save
 # Usage
 
 ```ts
-import { utils } from "ssv-core";
+import { string } from "ssv-core";
 
-let name = utils.string.interpolate("name=:name", { name: "Chiko" });
+let name = string.interpolate("name=:name", { name: "Chiko" });
 ```
 
 
