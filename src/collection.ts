@@ -15,10 +15,8 @@ export interface Dictionary<T> {
  * @param {Selectable} selectItem item to select.
  */
 export function mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void {
-
 	for (let item of collection) {
 		item.isSelected = false;
 	}
-
 	selectItem.isSelected = true;
 }
