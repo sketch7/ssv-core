@@ -1,5 +1,15 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/sketch7/ssv-core/compare/0.2.0...v0.2.1) (2016-11-20)
+
+
+### Features
+
+* **module:** package is now also being packaged as "umd" ([1582966](https://github.com/sketch7/ssv-core/commit/1582966))
+
+
+
 <a name="0.2.0"></a>
-# [0.2.0](https://github.com/sketch7/ssv-core/compare/0.1.0...v0.2.0) (2016-11-20)
+# [0.2.0](https://github.com/sketch7/ssv-core/compare/0.1.0...0.2.0) (2016-11-20)
 
 
 ### Features
