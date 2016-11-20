@@ -1,10 +1,6 @@
 {
 	"rules": {
 		"arrow-parens": false,
-		"array-type": [
-			true,
-			"array-simple"
-		],
 		"class-name": true,
 		"comment-format": [
 			true,
@@ -29,7 +25,6 @@
 			"static-before-instance",
 			"variables-before-functions"
 		],
-		"prefer-for-of": true,
 		"no-arg": true,
 		"no-bitwise": true,
 		"no-console": [
