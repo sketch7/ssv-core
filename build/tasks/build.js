@@ -11,7 +11,7 @@ const config = require("../config");
 gulp.task("build", (cb) => {
 	if (args.isRelease) {
 		return runSeq(
-			["lint", "compile:ts"],
+			["lint", "compile:ts:all"],
 			"copy-dist",
 			cb);
 	}
@@ -42,8 +42,17 @@ gulp.task("ci", (cb) => {
 });
 
 // scripts
-gulp.task("compile:ts", () => {
-	const tsProject = getTscProject();
+gulp.task("compile:ts", ["compile:ts:es2015"]);
+gulp.task("compile:ts:all", ["compile:ts:es2015", "compile:ts:umd"]);
+gulp.task("compile:ts:es2015", () => compileTs("es2015"));
+gulp.task("compile:ts:umd", () => compileTs("umd"));
+
+function compileTs(module) {
+	const tsProject = tsc.createProject("tsconfig.json", {
+		typescript: require("typescript"),
+		module
+		// outFile: `${config.packageName}.js`
+	});
 	const tsResult = gulp.src([config.src.ts, `!${config.src.testTs}`])
 		.pipe(plumber())
 		//.pipe(changed(paths.output.dist, { extension: ".js" }))
@@ -53,20 +62,13 @@ gulp.task("compile:ts", () => {
 	return merge([
 		tsResult.js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(`${config.output.artifact}/es2015`)),
+			.pipe(gulp.dest(`${config.output.artifact}/${module}`)),
 		tsResult.dts
 			.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	]);
-});
+}
 
 gulp.task("copy-dist", () => {
 	return gulp.src(`${config.output.artifact}/**/*`)
 		.pipe(gulp.dest(`${config.output.dist}`));
 });
-
-function getTscProject() {
-	return tsc.createProject("tsconfig.json", {
-		typescript: require("typescript"),
-		// outFile: `${config.packageName}.js`
-	});
-}

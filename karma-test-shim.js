@@ -9,7 +9,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 // we will call `__karma__.start()` later, once all the specs are loaded.
 __karma__.loaded = function () { };
 
-SystemJS.config({
+const config = {
 	baseURL: "/base/",
 	defaultJSExtensions: true,
 	paths: {
@@ -24,8 +24,19 @@ SystemJS.config({
 		// vendors
 		"lodash": { main: "index.js", defaultExtension: "js" },
 	}
+};
+
+// ssv
+const ssvPackageNames = [
+	"core",
+];
+
+ssvPackageNames.forEach(pkgName => {
+	const name = `@ssv/${pkgName}`;
+	config.packages[name] = { main: "dist/umd/index.js", defaultExtension: "js" };
 });
 
+SystemJS.config(config);
 SystemJS.import("test/test-setup")
 	.then(function () {
 		return Promise.all(resolveTestFiles());
