@@ -26,7 +26,7 @@ export const PARSE_BOOL_CONFIG: Dictionary<boolean> = {
  * @param {string} value string template to interpolate
  * @param {*} data data object to replace tokens
  * @param {string} [interpolatePrefix=":"] interpolation token prefix
- * @returns interpolated string
+ * @returns {string} string interpolated
  */
 export function interpolate(value: string, data: any, interpolatePrefix = ":") {
 	data = data || {};
