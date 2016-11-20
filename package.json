@@ -14,7 +14,7 @@
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",
-  "main": "dist/amd/index.js",
+  "main": "dist/es2015/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sketch7/ssv-core"

@@ -53,7 +53,7 @@ gulp.task("compile:ts", () => {
 	return merge([
 		tsResult.js
 			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(`${config.output.artifact}/amd`)),
+			.pipe(gulp.dest(`${config.output.artifact}/es2015`)),
 		tsResult.dts
 			.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	]);
