@@ -22,6 +22,7 @@
   "devDependencies": {
     "@types/jasmine": "^2.5.37",
     "@types/lodash": "^4.14.38",
+    "@types/lodash-es": "^4.14.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.1.0",
@@ -40,7 +41,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-mocha-reporter": "^2.2.0",
     "karma-typescript-preprocessor": "^0.3.0",
-    "lodash": "^4.17.2",
+    "lodash-es": "^4.17.2",
     "merge2": "^1.0.2",
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",

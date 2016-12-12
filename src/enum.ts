@@ -1,4 +1,4 @@
-﻿import * as _ from "lodash";
+﻿import kebabCase from "lodash-es/kebabCase";
 
 /**
  * Gets all names of the enum as an array.
@@ -15,7 +15,7 @@ export function getNames(e: any): string[] {
  * @returns enum definition names as a string array with kebab case e.g. `["elite", "boss", "normal", "raid-boss"]`.
  */
 export function getNamesKebab(e: any): string[] {
-	return Object.keys(e).map(v => _.kebabCase(v)).filter(v => isNaN(parseInt(v, 10)));
+	return Object.keys(e).map(v => kebabCase(v)).filter(v => isNaN(parseInt(v, 10)));
 }
 
 /**
