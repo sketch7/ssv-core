@@ -1,5 +1,5 @@
 {
 	"extends": [
-		"./node_modules/@ssv/tools/tslint.json"
+		"./node_modules/@ssv/tools/tslint.base.json"
 	]
 }
