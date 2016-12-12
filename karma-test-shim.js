@@ -17,13 +17,13 @@ const config = {
 	},
 	map: {
 		// vendors
-		"lodash": "npm:lodash",
+		"lodash-es": "npm:lodash-es",
 		"@ssv": "npm:@ssv",
 	},
 	packages: {
 		// vendors
-		"lodash": { main: "index.js", defaultExtension: "js" },
-	}
+		"lodash-es": { defaultExtension: "js", transpiler: "plugin-babel" },
+	},
 };
 
 // ssv
