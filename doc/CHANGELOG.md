@@ -1,5 +1,20 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/sketch7/ssv-core/compare/0.2.1...v0.3.0) (2016-12-12)
+
+
+### Features
+
+* **package:** changed `lodash` to `lodash-es` ([dd86281](https://github.com/sketch7/ssv-core/commit/dd86281))
+
+
+### BREAKING CHANGES
+
+* package: changed from `lodash` to `lodash-es`
+
+
+
 <a name="0.2.1"></a>
-## [0.2.1](https://github.com/sketch7/ssv-core/compare/0.2.0...v0.2.1) (2016-11-20)
+## [0.2.1](https://github.com/sketch7/ssv-core/compare/0.2.0...0.2.1) (2016-11-20)
 
 
 ### Features
