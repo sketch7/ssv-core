@@ -1,6 +1,10 @@
 {
 	"rules": {
 		"arrow-parens": false,
+		"array-type": [
+			true,
+			"array-simple"
+		],
 		"class-name": true,
 		"comment-format": [
 			true,
@@ -69,6 +73,7 @@
 			true,
 			"allow-declarations"
 		],
+		"prefer-for-of": true,
 		"quotemark": [
 			true,
 			"double"
