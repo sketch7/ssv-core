@@ -10,7 +10,7 @@ module.exports = function (config) {
 			{ pattern: "node_modules/systemjs/dist/system-polyfills.js", included: false, watched: false, served: true }, // PhantomJS2 (and possibly others) might require it
 
 			// vendors
-			{ pattern: "node_modules/lodash-es/**/*.js", included: false, watched: false, served: true },
+			{ pattern: "node_modules/lodash/**/*.js", included: false, watched: false, served: true },
 
 			{ pattern: conf.src.ts, included: false, watched: true }, // source files
 			{ pattern: conf.test.setup, included: false, watched: true },
@@ -23,13 +23,6 @@ module.exports = function (config) {
 		preprocessors: {
 			[conf.src.ts]: ["typescript"],
 			[conf.test.setup]: ["typescript"],
-			"node_modules/lodash-es/**/*.js": ["babel"],
-		},
-		babelPreprocessor: {
-			options: {
-				presets: ["es2015"],
-
-			},
 		},
 		typescriptPreprocessor: {
 			options: {
