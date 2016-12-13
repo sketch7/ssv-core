@@ -15,7 +15,9 @@
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",
-  "main": "dist/es2015/index.js",
+  "main": "dist/bundles/ssv-core.umd.js",
+  "module": "dist/es2015/index.js",
+  "typings": "dist/es2015/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/sketch7/ssv-core"
@@ -54,6 +56,5 @@
   "dependencies": {},
   "peerDependencies": {
     "lodash": "^4.0.0"
-  },
-  "typings": "dist/typings/index.d.ts"
+  }
 }
