@@ -33,7 +33,7 @@ const ssvPackageNames = [
 
 ssvPackageNames.forEach(pkgName => {
 	const name = `@ssv/${pkgName}`;
-	config.packages[name] = { main: "dist/umd/index.js", defaultExtension: "js" };
+	config.packages[name] = { main: `dist/bundles/ssv-${pkgName}.umd.js`, defaultExtension: "js" };
 });
 
 SystemJS.config(config);
