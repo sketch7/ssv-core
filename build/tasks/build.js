@@ -4,6 +4,7 @@ const tsc = require("gulp-typescript");
 const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 const merge = require("merge2");
+const ssvTools = require("@ssv/tools");
 
 const args = require("../args");
 const config = require("../config");
@@ -13,6 +14,7 @@ gulp.task("build", (cb) => {
 		return runSeq(
 			["lint", "compile:ts:all"],
 			"copy-dist",
+			"bundle:ts",
 			cb);
 	}
 	return runSeq(
@@ -44,28 +46,35 @@ gulp.task("ci", (cb) => {
 // scripts
 gulp.task("compile:ts", ["compile:ts:es2015"]);
 gulp.task("compile:ts:all", ["compile:ts:es2015", "compile:ts:umd"]);
-gulp.task("compile:ts:es2015", () => compileTs("es2015"));
-gulp.task("compile:ts:umd", () => compileTs("umd"));
+gulp.task("compile:ts:es2015", () => compileTs({ module: "es2015" }));
+gulp.task("compile:ts:umd", () => compileTs({ module: "umd" }));
 
-function compileTs(module) {
-	const tsProject = tsc.createProject("tsconfig.json", {
-		typescript: require("typescript"),
-		module
-		// outFile: `${config.packageName}.js`
+gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
+
+function compileTs({ module }) {
+	return ssvTools.compileTsc({
+		module,
+		configPath: "./tsconfig.build.json",
+		continueOnError: args.continueOnError
 	});
-	const tsResult = gulp.src([config.src.ts, `!${config.src.testTs}`])
-		.pipe(plumber())
-		//.pipe(changed(paths.output.dist, { extension: ".js" }))
-		.pipe(sourcemaps.init())
-		.pipe(tsProject());
+	// const tsProject = tsc.createProject("tsconfig.json", {
+	// 	typescript: require("typescript"),
+	// 	module
+	// 	// outFile: `${config.packageName}.js`
+	// });
+	// const tsResult = gulp.src([config.src.ts, `!${config.src.testTs}`])
+	// 	.pipe(plumber())
+	// 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
+	// 	.pipe(sourcemaps.init())
+	// 	.pipe(tsProject());
 
-	return merge([
-		tsResult.js
-			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest(`${config.output.artifact}/${module}`)),
-		tsResult.dts
-			.pipe(gulp.dest(`${config.output.artifact}/typings`))
-	]);
+	// return merge([
+	// 	tsResult.js
+	// 		.pipe(sourcemaps.write("."))
+	// 		.pipe(gulp.dest(`${config.output.artifact}/${module}`)),
+	// 	tsResult.dts
+	// 		.pipe(gulp.dest(`${config.output.artifact}/typings`))
+	// ]);
 }
 
 gulp.task("copy-dist", () => {

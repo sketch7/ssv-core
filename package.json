@@ -10,7 +10,8 @@
   "scripts": {
     "test": "gulp test",
     "lint": "gulp lint",
-    "build": "gulp build"
+    "build": "gulp build",
+    "bundle": "node_modules/.bin/rollup -c rollup.config.js"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",
@@ -20,7 +21,7 @@
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "@ssv/tools": "^0.2.0",
+    "@ssv/tools": "^0.3.0",
     "@types/jasmine": "^2.5.37",
     "@types/lodash": "^4.14.38",
     "del": "^2.2.2",
