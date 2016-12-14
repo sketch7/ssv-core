@@ -1,6 +1,6 @@
 {
   "name": "@ssv/core",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -12,7 +12,7 @@
     "lint": "gulp lint",
     "build": "gulp build",
     "bundle": "node_modules/.bin/rollup -c rollup.config.js",
-    "magic-publish": "git checkout master && git merge develop && git push && gulp publish --rel --bump minor && npm publish && git checkout develop && git merge master && git push"
+    "magic-publish": "git checkout master && git pull && git merge develop && git push && gulp publish --rel --bump minor && npm publish && git checkout develop && git merge master && git push"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",

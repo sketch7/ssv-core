@@ -1,5 +1,17 @@
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/sketch7/ssv-core/compare/0.3.0...v0.3.1) (2016-12-14)
+
+
+### Features
+
+* **bundle:** now also compiled as umd bundle under `dist/bundles` ([d90728d](https://github.com/sketch7/ssv-core/commit/d90728d))
+* **lodash:** changed back lodash to lodash instead of `lodash-es` ([d6cc943](https://github.com/sketch7/ssv-core/commit/d6cc943))
+* **package:** `main` is now using umd bundled, `module` using es2015 and typings updated accordingly ([1a84826](https://github.com/sketch7/ssv-core/commit/1a84826))
+
+
+
 <a name="0.3.0"></a>
-# [0.3.0](https://github.com/sketch7/ssv-core/compare/0.2.1...v0.3.0) (2016-12-12)
+# [0.3.0](https://github.com/sketch7/ssv-core/compare/0.2.1...0.3.0) (2016-12-12)
 
 
 ### Features
