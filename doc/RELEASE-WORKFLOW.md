@@ -28,6 +28,8 @@ RC release process
 ## New Stable Release
 Stable release process
  - Checkout `master`
+ - Get latest `git pull`
+ - Merge `develop => master`
  - Run `gulp publish --rel --bump major|minor|patch (default: patch)`
  - Merge `master => develop`
 

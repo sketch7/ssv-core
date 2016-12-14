@@ -2,6 +2,7 @@
 jspm_packages
 node_modules
 .idea
+npm-debug.log
 
 _artifact
 build
