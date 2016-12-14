@@ -11,7 +11,8 @@
     "test": "gulp test",
     "lint": "gulp lint",
     "build": "gulp build",
-    "bundle": "node_modules/.bin/rollup -c rollup.config.js"
+    "bundle": "node_modules/.bin/rollup -c rollup.config.js",
+    "magic-publish": "git checkout master && git merge develop && git push && gulp publish --rel --bump minor && npm publish && git checkout develop && git merge master && git push"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",

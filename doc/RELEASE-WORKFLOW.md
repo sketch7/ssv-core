@@ -31,6 +31,8 @@ Stable release process
  - Run `gulp publish --rel --bump major|minor|patch (default: patch)`
  - Merge `master => develop`
 
+Or use the below to automate it. *note* change `gulp publish --rel --bump XXX` to whatever is needed.
+ `npm run magic-publish`
 
 # Gulp Release Commands
 Commands in order to help release easier.
