@@ -11,12 +11,12 @@ gulp.task("watch", () => {
 	gulp.watch([config.src.ts, `!${config.src.testTs}`], () => {
 		if (args.isRelease) {
 			return runSeq(
-				"compile:ts",
+				"compile:ts:dev",
 				"copy-dist"
 			);
 		} else {
 			return runSeq(
-				"compile:ts"
+				"compile:ts:dev"
 			);
 		}
 	}).on("change", reportChange)

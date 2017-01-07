@@ -20,6 +20,11 @@ module.exports = {
 		browsers: ["Chrome"],
 		setup: "test/test-setup.ts"
 	},
+	buildTargets: [
+		"es2015",
+		"umd"
+	],
+	devTarget: "umd",
 	doc: "./doc",
 	packageName: pkg.name
 };

@@ -12,13 +12,13 @@ const config = require("../config");
 gulp.task("build", (cb) => {
 	if (args.isRelease) {
 		return runSeq(
-			["lint", "compile:ts:all"],
+			["lint", "compile:ts"],
 			"copy-dist",
 			"bundle:ts",
 			cb);
 	}
 	return runSeq(
-		["lint", "compile:ts"],
+		["lint", "compile:ts:dev"],
 		cb);
 });
 
@@ -43,17 +43,10 @@ gulp.task("ci", (cb) => {
 		cb);
 });
 
-// scripts
-gulp.task("compile:ts", ["compile:ts:es2015"]);
-gulp.task("compile:ts:all", ["compile:ts:es2015", "compile:ts:umd"]);
-gulp.task("compile:ts:es2015", () => compileTs({ module: "es2015" }));
-gulp.task("compile:ts:umd", () => compileTs({ module: "umd" }));
-
-gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
-
-function compileTs({ module }) {
+// scripts - compile:ts | compile:ts:dev | compile:ts:TARGET
+function compileTs(target) {
 	return ssvTools.compileTsc({
-		module,
+		module: target,
 		configPath: "./tsconfig.build.json",
 		continueOnError: args.continueOnError
 	});
@@ -76,6 +69,14 @@ function compileTs({ module }) {
 	// 		.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	// ]);
 }
+ssvTools.registerGulpMultiTargetBuilds({
+	taskName: "ts",
+	action: compileTs,
+	config: config
+});
+
+gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
+
 
 gulp.task("copy-dist", () => {
 	return gulp.src(`${config.output.artifact}/**/*`)
