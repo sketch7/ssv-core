@@ -1,5 +1,15 @@
+<a name="0.3.5"></a>
+## [0.3.5](https://github.com/sketch7/ssv-core/compare/0.3.4...v0.3.5) (2017-03-16)
+
+
+### Features
+
+* **object:** added `PartialObject<T>` and `NonArray` ([#8](https://github.com/sketch7/ssv-core/issues/8)) ([98f0fcd](https://github.com/sketch7/ssv-core/commit/98f0fcd))
+
+
+
 <a name="0.3.4"></a>
-## [0.3.4](https://github.com/sketch7/ssv-core/compare/0.3.3...v0.3.4) (2017-02-05)
+## [0.3.4](https://github.com/sketch7/ssv-core/compare/0.3.3...0.3.4) (2017-02-05)
 
 
 
@@ -62,22 +72,70 @@
 
 
 <a name="0.1.0"></a>
-# [0.1.0](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.1...0.1.0) (2016-11-14)
+# [0.1.0](https://github.com/sketch7/ssv-core/compare/0.7.0...0.1.0) (2016-11-14)
 
 
-### Bug Fixes
 
-* **package:** package has been changed from bundled to unbundled due to issues with jspm when installing ([eb076ac](https://github.com/sketch7/ssv-core/commit/eb076ac))
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/sketch7/ssv-core/compare/0.6.5...0.7.0) (2016-06-02)
+
+
+
+<a name="0.6.5"></a>
+## [0.6.5](https://github.com/sketch7/ssv-core/compare/0.6.4...0.6.5) (2016-05-19)
+
+
+### Features
+
+* **string:** implemented `replaceAll` which replaces all string occurrences. ([4ddf58c](https://github.com/sketch7/ssv-core/commit/4ddf58c))
+
+
+
+<a name="0.6.4"></a>
+## [0.6.4](https://github.com/sketch7/ssv-core/compare/0.6.3...0.6.4) (2016-03-30)
+
+
+
+<a name="0.6.3"></a>
+## [0.6.3](https://github.com/sketch7/ssv-core/compare/0.6.1...0.6.3) (2016-03-29)
+
+
+
+<a name="0.6.1"></a>
+## [0.6.1](https://github.com/sketch7/ssv-core/compare/0.6.0...0.6.1) (2016-03-29)
+
+
+
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/sketch7/ssv-core/compare/0.5.0...0.6.0) (2016-03-06)
+
+
+### Features
+
+* **conversion:** initial implementation of conversion which has time conversions ([a294e92](https://github.com/sketch7/ssv-core/commit/a294e92))
+* **definition:** change definition witihin  package.json to use `typings` instead `typescript` to point to definition ([f70f97d](https://github.com/sketch7/ssv-core/commit/f70f97d))
+
+
+
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/sketch7/ssv-core/compare/0.4.0...0.5.0) (2016-02-25)
 
 
 ### Features
 
 * **collection:** add `Dictionary<T>` interface ([5029543](https://github.com/sketch7/ssv-core/commit/5029543))
-* **conversion:** initial implementation of conversion which has time conversions ([a294e92](https://github.com/sketch7/ssv-core/commit/a294e92))
-* **definition:** change definition witihin  package.json to use `typings` instead `typescript` to point to definition ([f70f97d](https://github.com/sketch7/ssv-core/commit/f70f97d))
 * **math:** implemented `round` functionality to math which supports both string and numeric ([3730731](https://github.com/sketch7/ssv-core/commit/3730731))
 * **string:** implemented `parseBool` which is more humanize friendly boolean parsing ([965f7f8](https://github.com/sketch7/ssv-core/commit/965f7f8))
-* **string:** implemented `replaceAll` which replaces all string occurrences. ([4ddf58c](https://github.com/sketch7/ssv-core/commit/4ddf58c))
+
+
+
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.1...0.4.0) (2016-02-21)
+
+
+### Bug Fixes
+
+* **package:** package has been changed from bundled to unbundled due to issues with jspm when installing ([eb076ac](https://github.com/sketch7/ssv-core/commit/eb076ac))
 
 
 
