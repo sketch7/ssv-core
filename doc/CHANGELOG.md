@@ -1,5 +1,10 @@
+<a name="0.3.4"></a>
+## [0.3.4](https://github.com/sketch7/ssv-core/compare/0.3.3...v0.3.4) (2017-02-05)
+
+
+
 <a name="0.3.3"></a>
-## [0.3.3](https://github.com/sketch7/ssv-core/compare/0.3.2...v0.3.3) (2016-12-14)
+## [0.3.3](https://github.com/sketch7/ssv-core/compare/0.3.2...0.3.3) (2016-12-14)
 
 
 
@@ -57,17 +62,12 @@
 
 
 <a name="0.1.0"></a>
-# [0.1.0](https://github.com/sketch7/ssv-core/compare/33dc8e4...0.1.0) (2016-11-14)
+# [0.1.0](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.1...0.1.0) (2016-11-14)
 
 
 ### Bug Fixes
 
 * **package:** package has been changed from bundled to unbundled due to issues with jspm when installing ([eb076ac](https://github.com/sketch7/ssv-core/commit/eb076ac))
-
-
-### Code Refactoring
-
-* **collection:** renamed ISelectable to Selectable ([33dc8e4](https://github.com/sketch7/ssv-core/commit/33dc8e4))
 
 
 ### Features
@@ -78,12 +78,66 @@
 * **math:** implemented `round` functionality to math which supports both string and numeric ([3730731](https://github.com/sketch7/ssv-core/commit/3730731))
 * **string:** implemented `parseBool` which is more humanize friendly boolean parsing ([965f7f8](https://github.com/sketch7/ssv-core/commit/965f7f8))
 * **string:** implemented `replaceAll` which replaces all string occurrences. ([4ddf58c](https://github.com/sketch7/ssv-core/commit/4ddf58c))
+
+
+
+<a name="0.2.1-rc.1"></a>
+## [0.2.1-rc.1](https://github.com/sketch7/ssv-core/compare/0.2.1-rc.0...0.2.1-rc.1) (2016-02-21)
+
+
+
+<a name="0.2.1-rc.0"></a>
+## [0.2.1-rc.0](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.3...0.2.1-rc.0) (2016-02-21)
+
+
+### Features
+
 * **typings:** modified typings to include devDep ([3288822](https://github.com/sketch7/ssv-core/commit/3288822))
+
+
+
+<a name="0.1.6-rc.3"></a>
+## [0.1.6-rc.3](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.2...0.1.6-rc.3) (2016-02-19)
+
+
+
+<a name="0.1.6-rc.2"></a>
+## [0.1.6-rc.2](https://github.com/sketch7/ssv-core/compare/0.1.6-rc.1...0.1.6-rc.2) (2016-02-19)
+
+
+### Code Refactoring
+
+* **collection:** renamed ISelectable to Selectable ([33dc8e4](https://github.com/sketch7/ssv-core/commit/33dc8e4))
 
 
 ### BREAKING CHANGES
 
 * collection: renamed `ISelectable` to `Selectable`
+
+
+
+<a name="0.1.6-rc.1"></a>
+## [0.1.6-rc.1](https://github.com/sketch7/ssv-core/compare/0.1.5...0.1.6-rc.1) (2016-02-18)
+
+
+
+<a name="0.1.5-1"></a>
+## [0.1.5-1](https://github.com/sketch7/ssv-core/compare/0.1.4...0.1.5-1) (2016-02-17)
+
+
+
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/sketch7/ssv-core/compare/0.1.3...0.1.4) (2016-02-09)
+
+
+
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/sketch7/ssv-core/compare/0.1.2...0.1.3) (2016-02-08)
+
+
+
+<a name="0.1.2"></a>
+## 0.1.2 (2016-02-08)
 
 
 

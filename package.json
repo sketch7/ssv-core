@@ -1,6 +1,6 @@
 {
   "name": "@ssv/core",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -25,8 +25,8 @@
   },
   "devDependencies": {
     "@ssv/tools": "^0.4.0",
-    "@types/jasmine": "^2.5.37",
-    "@types/lodash": "^4.14.38",
+    "@types/jasmine": "^2.5.41",
+    "@types/lodash": "^4.14.52",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.1.0",
