@@ -1,4 +1,4 @@
-﻿import { Dictionary, Selectable } from "./collection";
+﻿ import { Dictionary, Selectable } from "./collection";
 import * as collection from "./collection";
 import * as dateTime from "./date-time";
 import * as enumUtil from "./enum";

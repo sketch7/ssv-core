@@ -1,4 +1,4 @@
-﻿import { kebabCase } from "lodash";
+﻿ import { kebabCase } from "lodash";
 
 /**
  * Gets all names of the enum as an array.
