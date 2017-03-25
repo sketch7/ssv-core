@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "test": "gulp test",
+    "start": "gulp watch",
+    "watch": "gulp watch",
     "lint": "gulp lint",
     "build": "gulp build",
     "bundle": "node_modules/.bin/rollup -c rollup.config.js",
