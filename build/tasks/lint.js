@@ -1,6 +1,8 @@
 const gulp = require("gulp");
 const ssvTools = require("@ssv/tools");
 
-const config = require("../config");
+const args = require("../args");
 
-gulp.task("lint", ssvTools.lintTs);
+gulp.task("lint", () => ssvTools.lintTs({
+	fix: args.fix
+}));
