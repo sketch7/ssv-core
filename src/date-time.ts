@@ -62,7 +62,6 @@ export function fromMinutesToSeconds(minutes: number): number {
 	return minutes * SECONDS_PER_MINUTE;
 }
 
-
 /**
  * Converts time from specified time unit to an other time unit.
  *
@@ -72,7 +71,6 @@ export function fromMinutesToSeconds(minutes: number): number {
  * @returns {number} time in specified units
  */
 export function convertTime(value: number, fromUnit: TimeUnits, toUnit: TimeUnits): number {
-
 	switch (fromUnit) {
 		case TimeUnits.Milliseconds:
 			return fromMillisecondsTo(value, toUnit);
