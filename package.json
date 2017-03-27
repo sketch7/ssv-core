@@ -13,7 +13,7 @@
     "watch": "gulp watch",
     "lint": "gulp lint",
     "build": "gulp build",
-    "bundle": "node_modules/.bin/rollup -c rollup.config.js",
+    "bundle": "gulp bundle:ts",
     "magic-publish": "git checkout master && git pull && git merge develop && git push && gulp publish --rel --bump minor && git checkout develop && git merge master && git push"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
