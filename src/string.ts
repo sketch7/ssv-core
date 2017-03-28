@@ -7,17 +7,17 @@
  */
 export const PARSE_BOOL_CONFIG: Dictionary<boolean> = {
 	// truthy
-	"true": true,
-	"1": true,
-	"yes": true,
-	"y": true,
-	"on": true,
+	true: true,
+	1: true,
+	yes: true,
+	y: true,
+	on: true,
 	// falsy
-	"false": false,
-	"0": false,
-	"no": false,
-	"n": false,
-	"off": false
+	false: false,
+	0: false,
+	no: false,
+	n: false,
+	off: false
 };
 
 /**

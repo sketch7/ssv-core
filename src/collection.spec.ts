@@ -1,4 +1,4 @@
-﻿ import * as SUT from "./collection";
+﻿import * as SUT from "./collection";
 import { Selectable } from "./collection";
 
 interface SelectableMock extends Selectable {

@@ -1,4 +1,4 @@
-﻿ export interface Selectable {
+﻿export interface Selectable {
 	/**
 	 * Gets or sets whether the item is selected or not.
 	 */

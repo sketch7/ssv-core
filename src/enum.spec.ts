@@ -1,4 +1,4 @@
-﻿ import * as SUT from "./enum";
+﻿import * as SUT from "./enum";
 
 enum CharacterStatus {
 	Elite = 1,
