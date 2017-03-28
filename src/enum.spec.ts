@@ -11,22 +11,22 @@ enum CharacterStatus {
 describe("Enum Utils", () => {
 
 	describe("getNamesSpecs", () => {
-		it("should return enum names as array.", () => {
-			let result = SUT.getNames(CharacterStatus);
+		it("should return enum names as array", () => {
+			const result = SUT.getNames(CharacterStatus);
 			expect(result).toEqual(["Elite", "Boss", "Normal", "RaidBoss"]);
 		});
 	});
 
 	describe("getNamesKebabSpecs", () => {
-		it("should return enum kebab names as array.", () => {
-			let result = SUT.getNamesKebab(CharacterStatus);
+		it("should return enum kebab names as array", () => {
+			const result = SUT.getNamesKebab(CharacterStatus);
 			expect(result).toEqual(["elite", "boss", "normal", "raid-boss"]);
 		});
 	});
 
 	describe("getValuesSpecs", () => {
-		it("should return enum values as array.", () => {
-			let result = SUT.getValues(CharacterStatus);
+		it("should return enum values as array", () => {
+			const result = SUT.getValues(CharacterStatus);
 			expect(result).toEqual([1, 2, 3, 4]);
 		});
 	});
