@@ -8,8 +8,9 @@
     "utils"
   ],
   "scripts": {
-    "test": "gulp test",
     "start": "gulp watch",
+    "test": "gulp test",
+    "tdd": "gulp tdd",
     "watch": "gulp watch",
     "lint": "gulp lint",
     "build": "gulp build",
