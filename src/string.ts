@@ -43,13 +43,13 @@ export function interpolate(value: string, data: any, interpolatePrefix = ":") {
 
 /**
  * Parses a value to boolean "humanized", which can also be configured in order to add additional values. e.g.
- * true => "true", "1", "yes", "y", "on"
- * false => "false", "0", "no", "n", "off"
- * @param {string} value string value to parse
- * @returns {boolean} true or false
+ * true => `"true"`, `"1"`, `"yes"`, `"y"`, `"on"`
+ * false => `"false"`, `"0"`, `"no"`, `"n"`, `"off"` or non existent.
+ * @param value value to parse
+ * @returns `true`, `false`
  */
-export function parseBool(value: string): boolean {
-	return PARSE_BOOL_CONFIG[(String(value).toLowerCase())];
+export function parseBool(value: string | boolean | number | null | undefined) {
+	return PARSE_BOOL_CONFIG[(String(value).toLowerCase())] || false;
 }
 
 /**

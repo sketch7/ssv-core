@@ -27,83 +27,61 @@ describe("String Utils", () => {
 	});
 
 	describe("parseBoolSpecs", () => {
-
 		describe("given a truthy value", () => {
+			const truthyValues = [
+				true,
+				"true",
+				"yes",
+				"y",
+				"on",
+				"1",
+				1,
+			];
 
-			describe("when value of 'true'", () => {
-				it("should return true", () => {
-					const result = SUT.parseBool("true");
+			it("should return true", () => {
+				for (const value of truthyValues) {
+					const result = SUT.parseBool(value);
 					expect(result).toBe(true);
-				});
-			});
-
-			describe("when value of '1'", () => {
-				it("should return true", () => {
-					const result = SUT.parseBool("1");
-					expect(result).toBe(true);
-				});
-			});
-
-			describe("when value of 'yes'", () => {
-				it("should return true", () => {
-					const result = SUT.parseBool("yes");
-					expect(result).toBe(true);
-				});
-			});
-
-			describe("when value of 'y'", () => {
-				it("should return true", () => {
-					const result = SUT.parseBool("y");
-					expect(result).toBe(true);
-				});
-			});
-
-			describe("when value of 'on'", () => {
-				it("should return true", () => {
-					const result = SUT.parseBool("on");
-					expect(result).toBe(true);
-				});
+				}
 			});
 		});
 
 		describe("given a falsy value", () => {
+			const falsyValues = [
+				false,
+				"false",
+				"0",
+				0,
+				"no",
+				"n",
+				"off",
+				null,
+				undefined
+			];
 
-			describe("when value of 'false'", () => {
-				it("should return false", () => {
-					const result = SUT.parseBool("false");
+			it("should return false", () => {
+				for (const value of falsyValues) {
+					const result = SUT.parseBool(value);
 					expect(result).toBe(false);
-				});
-			});
-
-			describe("when value of '0'", () => {
-				it("should return false", () => {
-					const result = SUT.parseBool("0");
-					expect(result).toBe(false);
-				});
-			});
-
-			describe("when value of 'no'", () => {
-				it("should return false", () => {
-					const result = SUT.parseBool("no");
-					expect(result).toBe(false);
-				});
-			});
-
-			describe("when value of 'n'", () => {
-				it("should return false", () => {
-					const result = SUT.parseBool("n");
-					expect(result).toBe(false);
-				});
-			});
-
-			describe("when value of 'off'", () => {
-				it("should return false", () => {
-					const result = SUT.parseBool("off");
-					expect(result).toBe(false);
-				});
+				}
 			});
 		});
 
+		describe("given an unknown value", () => {
+			const falsyValues = [
+				"xxx",
+				null,
+				undefined
+			];
+
+			it("should return false", () => {
+				for (const value of falsyValues) {
+					const result = SUT.parseBool(value);
+					expect(result).toBe(false);
+				}
+			});
+
+		});
 
 	});
 
