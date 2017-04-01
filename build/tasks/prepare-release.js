@@ -88,7 +88,7 @@ gulp.task("npm-publish", (cb) => {
 	});
 });
 
-gulp.task("ssv-publisher", () => {
+gulp.task("ssv-publish", () => {
 	return ssvTools.publisher({
 		bump: args.bump
 	});
