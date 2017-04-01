@@ -62,4 +62,4 @@ export function parseBool(value: string): boolean {
  */
 export function replaceAll(value: string, search: string, replacement: string): string {
 	return value.replace(new RegExp(search, "g"), replacement);
-};
+}

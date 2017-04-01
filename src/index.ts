@@ -18,4 +18,4 @@ export {
 
 	Dictionary,
 	Selectable
-}
+};
