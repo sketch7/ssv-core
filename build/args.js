@@ -2,7 +2,7 @@ const yargs = require("yargs");
 
 const config = require("./config");
 
-var argv = yargs
+const argv = yargs
 	.alias("rel", "release")
 	.default("rel", false)
 
