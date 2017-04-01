@@ -15,6 +15,7 @@
     "lint": "gulp lint",
     "build": "gulp build",
     "bundle": "gulp bundle:ts",
+    "ssv-publish": "gulp ssv-publisher",
     "magic-publish": "git checkout master && git pull && git merge develop && git push && gulp publish --rel --bump minor && git checkout develop && git merge master && git push"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
@@ -27,7 +28,7 @@
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "@ssv/tools": "^0.5.0",
+    "@ssv/tools": "^0.6.0",
     "@types/jasmine": "^2.5.41",
     "@types/lodash": "^4.14.52",
     "del": "^2.2.2",
