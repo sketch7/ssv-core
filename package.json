@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "start": "gulp watch",
-    "test": "gulp test",
-    "tdd": "gulp tdd",
+    "test": "jest",
+    "tdd": "jest --watch",
+    "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --env jest-environment-node-debug",
+    "test-devt": "devtool ./node_modules/jest/bin/jest.js --runInBand --env jest-environment-node-debug",
     "watch": "gulp watch",
     "lint": "gulp lint",
     "build": "gulp build",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "@ssv/tools": "^0.6.0",
     "@types/jasmine": "^2.5.41",
+    "@types/jest": "^19.2.2",
     "@types/lodash": "^4.14.52",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -39,6 +42,8 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-util": "^3.0.7",
     "jasmine-core": "^2.5.2",
+    "jest": "^19.0.2",
+    "jest-environment-node-debug": "^2.0.0",
     "karma": "^1.5.0",
     "karma-appveyor-reporter": "^0.3.0",
     "karma-chrome-launcher": "^2.0.0",
@@ -49,11 +54,23 @@
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
     "systemjs": "^0.19.41",
+    "ts-jest": "^19.0.6",
     "typescript": "^2.2.0",
     "yargs": "^6.3.0"
   },
   "dependencies": {},
   "peerDependencies": {
     "lodash": "^4.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
   }
 }
