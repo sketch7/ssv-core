@@ -1,6 +1,6 @@
 environment:
   # Test against this version of Node.js
-  nodejs_version: "6"
+  nodejs_version: "7"
 
 # Install scripts. (runs after repo cloning)
 install:
@@ -16,8 +16,8 @@ test_script:
   - node --version
   - npm --version
   # run tests
-  - gulp lint
-  - gulp test --reporters mocha,appveyor
+  - npm lint
+  - npm test
 
 # Don't actually build.
 build: off
