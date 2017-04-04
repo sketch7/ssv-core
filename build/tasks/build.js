@@ -75,7 +75,6 @@ ssvTools.registerGulpMultiTargetBuilds({
 
 gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
 
-
 gulp.task("copy-dist", () => {
 	return gulp.src(`${config.output.artifact}/**/*`)
 		.pipe(gulp.dest(`${config.output.dist}`));

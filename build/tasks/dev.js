@@ -21,7 +21,6 @@ gulp.task("watch", () => {
 		}
 	}).on("change", reportChange)
 		.on("error", swallowError);
-
 });
 
 function reportChange(event) {
