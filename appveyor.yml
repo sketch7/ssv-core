@@ -27,8 +27,4 @@ notifications:
     incoming_webhook:
       secure: vEkNTGdxrec+HtMuHg87gPDSbcATux8FurC+ntE6+y9HzsbAkhizj5UIEA9ccKj0RC2SBkJECVo3dX9K5OQunXHRNFxBbvZrS08gMGRIx2I=
 
-cache:
- - node_modules
- - '%APPDATA%\npm-cache'
- 
 version: "{build}-{branch}"
