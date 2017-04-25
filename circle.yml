@@ -3,7 +3,6 @@ machine:
     version: 7.8.0
 compile:
   override:
-    - npm run lint
     - npm run build
 notify:
   webhooks:
