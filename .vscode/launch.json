@@ -7,15 +7,17 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "Launch Program",
-			"program": "${workspaceRoot}\\gulpfile.js"
-		},
-		{
-			"type": "node",
-			"request": "attach",
-			"name": "Attach to Process",
-			"address": "localhost",
-			"port": 5858
+			"name": "Jest test",
+			"program": "${workspaceRoot}\\node_modules\\jest\\bin\\jest.js",
+			"args": [
+				"-i",
+				"--env",
+				"jest-environment-node-debug"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"outFiles": [
+				"${workspaceRoot}/dist/**/*"
+			]
 		}
 	]
 }
