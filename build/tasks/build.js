@@ -37,7 +37,6 @@ gulp.task("ci", (cb) => {
 	return runSeq(
 		"rebuild",
 		"compile:test",
-		"test",
 		cb);
 });
 
