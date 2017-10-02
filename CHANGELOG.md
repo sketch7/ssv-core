@@ -1,5 +1,10 @@
+<a name="0.3.8"></a>
+## [0.3.8](https://github.com/sketch7/ssv-core/compare/0.3.7...0.3.8) (2017-10-02)
+
+
+
 <a name="0.3.7"></a>
-## [0.3.7](https://github.com/sketch7/ssv-core/compare/0.3.6...v0.3.7) (2017-04-01)
+## [0.3.7](https://github.com/sketch7/ssv-core/compare/0.3.6...0.3.7) (2017-04-01)
 
 
 ### Features
@@ -62,7 +67,7 @@
 
 ### BREAKING CHANGES
 
-* package: changed from `lodash` to `lodash-es`
+* **package:** changed from `lodash` to `lodash-es`
 
 
 
@@ -138,7 +143,7 @@
 
 ### BREAKING CHANGES
 
-* collection: renamed `ISelectable` to `Selectable`
+* **collection:** renamed `ISelectable` to `Selectable`
 
 
 

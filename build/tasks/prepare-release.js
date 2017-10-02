@@ -46,14 +46,14 @@ gulp.task("bump-version", () => {
 });
 
 gulp.task("changelog", () => {
-	return gulp.src(`${config.doc}/CHANGELOG.md`, {
+	return gulp.src(`./CHANGELOG.md`, {
 		buffer: false
 	})
 		.pipe(conventionalChangelog({
 			preset: "angular",
 			releaseCount: 0
 		}))
-		.pipe(gulp.dest(`${config.doc}`));
+		.pipe(gulp.dest("."));
 });
 
 gulp.task("commit-changes", () => {
