@@ -29,13 +29,13 @@
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "@ssv/tools": "^0.6.6",
-    "@types/jest": "^21.1.1",
-    "@types/lodash": "^4.14.76",
+    "@ssv/tools": "^0.6.11",
+    "@types/jest": "^21.1.2",
+    "@types/lodash": "^4.14.77",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-bump": "^2.7.0",
-    "gulp-conventional-changelog": "^1.1.5",
+    "gulp-bump": "^2.8.0",
+    "gulp-conventional-changelog": "^1.1.6",
     "gulp-git": "^2.4.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sourcemaps": "^2.6.1",
