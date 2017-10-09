@@ -26,17 +26,20 @@ jobs:
       - deploy:
           name: Publish NPM
           command: |
-            if [ "$CIRCLE_BRANCH" != "master" ]; then
+            # if [ "$CIRCLE_BRANCH" != "master" ]; then
+            if [ "$CIRCLE_BRANCH" != "feature/circle-ci-publish" ]; then
               echo -e "\e[33m Branch does not publish -- exit!"
               exit
             fi
             . ./.circleci/utils.sh
            
-            print_title "preparing release"
-            npm run ci-prepare-release
-            
-            print_title "starting publish"
             PACKAGE_VERSION=$(node -p "require('./package.json').version")
+            print_title "preparing release..."
+            npm run ci-prepare-release
+
+            git commit . -m "release(changelog): update changelog for `$PACKAGE_VERSION`"'
+            
+            print_title "publish..."
             npm publish
 
             print_title "git tag"
