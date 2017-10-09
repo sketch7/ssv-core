@@ -1,3 +1,8 @@
+<a name="0.3.12"></a>
+## [0.3.12](https://github.com/sketch7/ssv-core/compare/0.3.11...0.3.12) (2017-10-09)
+
+
+
 <a name="0.3.11"></a>
 ## [0.3.11](https://github.com/sketch7/ssv-core/compare/0.3.10...0.3.11) (2017-10-09)
 
