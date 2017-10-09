@@ -30,10 +30,14 @@ jobs:
               exit
             fi
             . ./.circleci/utils.sh
-
+           
+            print_title "preparing release"
+            npm run ci-prepare-release
+            
+            print_title "starting publish"
             PACKAGE_VERSION=$(node -p "require('./package.json').version")
-            # npm publish
+            npm publish
 
             print_title "git tag"
             git tag $PACKAGE_VERSION
-            # git push --tags
+            git push --tags

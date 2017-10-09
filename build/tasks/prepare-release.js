@@ -36,6 +36,15 @@ gulp.task("publish", (cb) => {
 	return publish("prerelease", "HEAD", cb);
 });
 
+gulp.task("ci-prepare-release", (cb) => {
+	args.isRelease = true;
+	return runSequence(
+		"changelog",
+		"commit-changes",
+		"push-changes",
+		cb);
+});
+
 // utils
 // -------------
 
