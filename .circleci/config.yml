@@ -37,7 +37,8 @@ jobs:
             print_title "preparing release..."
             npm run ci-prepare-release
 
-            git commit . -m "release(changelog) update changelog for `$PACKAGE_VERSION`"
+            # git commit . -m "release(changelog) update changelog for `$PACKAGE_VERSION`"
+            git commit . -m "release(changelog) update changelog"
             
             print_title "publish..."
             npm publish
