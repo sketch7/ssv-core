@@ -25,7 +25,8 @@ jobs:
       - deploy:
           name: Publish NPM
           command: |
-            if [ "$CIRCLE_BRANCH" != "master" ]; then
+           # if [ "$CIRCLE_BRANCH" != "master" ]; then
+            if [ "$CIRCLE_BRANCH" != "feature/circle-ci-publish" ]; then
               echo -e "\e[33m Branch does not publish -- exit!"
               exit
             fi
