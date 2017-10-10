@@ -1,6 +1,6 @@
 {
   "name": "@ssv/core",
-  "version": "0.3.7",
+  "version": "0.3.20",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -17,9 +17,9 @@
     "lint": "gulp lint",
     "build": "gulp build",
     "bundle": "gulp bundle:ts",
-    "ssv-publish": "gulp ssv-publish"
+    "ssv-prepare-release": "gulp prepare-release"
   },
-  "author": "Stephen Lautier <stephen.lautier@outlook.com>",
+  "author": "Stephen Lautier <stephen.lautier@outlook.com>, Clayton Lautier <clayton.lautier@outlook.com>",
   "license": "MIT",
   "main": "dist/bundles/ssv-core.umd.js",
   "module": "dist/es2015/index.js",
@@ -29,7 +29,7 @@
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "@ssv/tools": "^0.6.11",
+    "@ssv/tools": "^0.6.12",
     "@types/jest": "^21.1.2",
     "@types/lodash": "^4.14.77",
     "del": "^3.0.0",
@@ -45,9 +45,9 @@
     "lodash": "^4.17.4",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.2.0",
-    "ts-jest": "^21.1.1",
+    "ts-jest": "21.0.1",
     "typescript": "^2.5.3",
-    "yargs": "^7.1.0"
+    "yargs": "^9.0.1"
   },
   "dependencies": {},
   "peerDependencies": {

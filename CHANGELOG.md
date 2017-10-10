@@ -1,5 +1,60 @@
+<a name="0.3.20"></a>
+## [0.3.20](https://github.com/sketch7/ssv-core/compare/0.3.19...0.3.20) (2017-10-10)
+
+
+
+<a name="0.3.19"></a>
+## [0.3.19](https://github.com/sketch7/ssv-core/compare/0.3.17...0.3.19) (2017-10-10)
+
+
+
+<a name="0.3.17"></a>
+## [0.3.17](https://github.com/sketch7/ssv-core/compare/0.3.16...0.3.17) (2017-10-09)
+
+
+
+<a name="0.3.16"></a>
+## [0.3.16](https://github.com/sketch7/ssv-core/compare/0.3.15...0.3.16) (2017-10-09)
+
+
+
+<a name="0.3.15"></a>
+## [0.3.15](https://github.com/sketch7/ssv-core/compare/0.3.14...0.3.15) (2017-10-09)
+
+
+
+<a name="0.3.14"></a>
+## [0.3.14](https://github.com/sketch7/ssv-core/compare/0.3.13...0.3.14) (2017-10-09)
+
+
+
+<a name="0.3.13"></a>
+## [0.3.13](https://github.com/sketch7/ssv-core/compare/0.3.12...0.3.13) (2017-10-09)
+
+
+
+<a name="0.3.12"></a>
+## [0.3.12](https://github.com/sketch7/ssv-core/compare/0.3.11...0.3.12) (2017-10-09)
+
+
+
+<a name="0.3.11"></a>
+## [0.3.11](https://github.com/sketch7/ssv-core/compare/0.3.10...0.3.11) (2017-10-09)
+
+
+
+<a name="0.3.10"></a>
+## [0.3.10](https://github.com/sketch7/ssv-core/compare/0.3.9...0.3.10) (2017-10-09)
+
+
+
+<a name="0.3.9"></a>
+## [0.3.9](https://github.com/sketch7/ssv-core/compare/0.3.8...0.3.9) (2017-10-09)
+
+
+
 <a name="0.3.8"></a>
-## [0.3.8](https://github.com/sketch7/ssv-core/compare/0.3.7...0.3.8) (2017-10-02)
+## [0.3.8](https://github.com/sketch7/ssv-core/compare/0.3.7...0.3.8) (2017-10-09)
 
 
 
