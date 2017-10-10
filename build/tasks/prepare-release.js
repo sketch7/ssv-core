@@ -43,7 +43,7 @@ gulp.task("commit-changes", () => {
 	const version = getPackageJsonVersion();
 	return gulp.src(".")
 		.pipe(git.add())
-		.pipe(git.commit(`release(changelog): bumped version to \`${version}\` + updated changelog`));
+		.pipe(git.commit(`release(changelog): bump version to \`${version}\` + update changelog`));
 });
 
 gulp.task("push-changes", (cb) => {
