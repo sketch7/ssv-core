@@ -17,7 +17,7 @@
     "lint": "gulp lint",
     "build": "gulp build",
     "bundle": "gulp bundle:ts",
-    "ssv-prepare-release": "gulp prep-release"
+    "ssv-prepare-release": "gulp prepare-release"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>, Clayton Lautier <clayton.lautier@outlook.com>",
   "license": "MIT",
