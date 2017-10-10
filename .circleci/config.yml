@@ -34,11 +34,6 @@ jobs:
             . ./.circleci/utils.sh
            
             PACKAGE_VERSION=$(node -p "require('./package.json').version")
-            print_title "preparing release..."
-            npm run ci-prepare-release
-
-            # git commit . -m "release(changelog) update changelog for `$PACKAGE_VERSION`"
-            git commit . -m "release(changelog) update changelog"
             
             print_title "publish..."
             npm publish

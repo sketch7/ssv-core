@@ -36,13 +36,16 @@ gulp.task("publish", (cb) => {
 	return publish("prerelease", "HEAD", cb);
 });
 
-gulp.task("ci-prepare-release", (cb) => {
+
+gulp.task("prep-release", (cb) => {
 	args.isRelease = true;
 	return runSequence(
+		"bump-version",
 		"changelog",
+		"commit-changes",
+		"push-changes",
 		cb);
 });
-
 // utils
 // -------------
 
@@ -67,7 +70,7 @@ gulp.task("commit-changes", () => {
 	const version = getPackageJsonVersion();
 	return gulp.src(".")
 		.pipe(git.add())
-		.pipe(git.commit(`[Prepare Release] Bumped version to ${version}.`));
+		.pipe(git.commit(`release(changelog): bumped version to ${version} & updated changelog.`));
 });
 
 gulp.task("push-changes", (cb) => {
