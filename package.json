@@ -1,6 +1,6 @@
 {
   "name": "@ssv/core",
-  "version": "0.3.20",
+  "version": "0.3.21",
   "description": "ssv core components, utilities and services",
   "keywords": [
     "sketch7",
@@ -17,7 +17,7 @@
     "lint": "gulp lint",
     "build": "gulp build",
     "bundle": "gulp bundle:ts",
-    "ssv-prepare-release": "gulp prepare-release"
+    "prepare-release": "gulp prepare-release"
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>, Clayton Lautier <clayton.lautier@outlook.com>",
   "license": "MIT",
