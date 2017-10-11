@@ -2,8 +2,7 @@
 [projectGit]: https://github.com/sketch7/ssv-core.git
 [changeLog]: ./CHANGELOG.md
 
-[contribWiki]: ./doc/CONTRIBUTION.md
-[releaseWorkflowWiki]: ./doc/RELEASE-WORKFLOW.md
+[releaseWorkflowWiki]: ./docs/RELEASE-WORKFLOW.md
 
 [npm]: https://www.npmjs.com
 
@@ -18,7 +17,7 @@ In order to contribute please read the [Contribution guidelines][contribWiki].
 
 **Quick links**
 
-[Change logs][changeLog] | [Project Repository][projectUri] | [Contribution guidelines][contribWiki]
+[Change logs][changeLog] | [Project Repository][projectUri]
 
 ## Installation
 
@@ -108,6 +107,6 @@ npm run tdd
 ### Preparation for Release
 
 ```
-gulp prepare-release --bump major|minor|patch|prerelease (default: patch)
+npm run ssv-prepare-release -- --bump major|minor|patch|prerelease (default: patch)
 ```
 Check out the [release workflow guide][releaseWorkflowWiki] in order to guide you creating a release and publishing it.
