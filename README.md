@@ -1,6 +1,7 @@
 [projectUri]: https://github.com/sketch7/ssv-core
 [projectGit]: https://github.com/sketch7/ssv-core.git
 [changeLog]: ./CHANGELOG.md
+[releaseWorkflowWiki]: ./docs/RELEASE-WORKFLOW.md
 
 [npm]: https://www.npmjs.com
 
