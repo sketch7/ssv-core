@@ -1,14 +1,27 @@
-export default {
-	input: "./dist/es2015/index.js",
+const fs = require("fs");
+const pkg = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
+
+const name = pkg.name.replace("@", "").replace(/(\/|\.)/g, "-");
+
+module.exports = {
+	input: pkg.module,
 	output: {
-		file: "./dist/bundles/ssv-core.umd.js",
+		file: pkg.main,
 		format: "umd",
-		name: "ssv.core",
-		globals: {
-			"lodash": "lodash"
-		}
+		name
 	},
-	external: [
-		"lodash"
-	]
+	external: id => id.indexOf("node_modules") > -1,
+	onwarn
+}
+
+function onwarn(warning) {
+	const suppressed = [
+		"UNRESOLVED_IMPORT",
+		"MISSING_GLOBAL_NAME",
+		"THIS_IS_UNDEFINED"
+	];
+
+	if (!suppressed.find(code => warning.code === code)) {
+		return console.warn(warning.message);
+	}
 }

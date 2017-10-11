@@ -2,8 +2,6 @@ const gulp = require("gulp");
 const runSequence = require("run-sequence");
 const conventionalChangelog = require("gulp-conventional-changelog");
 const bump = require("gulp-bump");
-const git = require("gulp-git");
-const fs = require("fs");
 
 const args = require("../args");
 
@@ -13,11 +11,8 @@ gulp.task("prepare-release", (cb) => {
 	return runSequence(
 		"bump-version",
 		"changelog",
-		"commit-changes",
-		"push-changes",
 		cb);
 });
-
 
 // utils
 // -------------
@@ -29,7 +24,7 @@ gulp.task("bump-version", () => {
 });
 
 gulp.task("changelog", () => {
-	return gulp.src(`./CHANGELOG.md`, {
+	return gulp.src("./CHANGELOG.md", {
 		buffer: false
 	})
 		.pipe(conventionalChangelog({
@@ -38,20 +33,3 @@ gulp.task("changelog", () => {
 		}))
 		.pipe(gulp.dest("."));
 });
-
-gulp.task("commit-changes", () => {
-	const version = getPackageJsonVersion();
-	return gulp.src(".")
-		.pipe(git.add())
-		.pipe(git.commit(`release(changelog): bump version to \`${version}\` + update changelog`));
-});
-
-gulp.task("push-changes", (cb) => {
-	git.push("origin", publishBranch, cb);
-});
-
-function getPackageJsonVersion() {
-	// We parse the json file instead of using require because require caches
-	// multiple calls so the version number won't be updated
-	return JSON.parse(fs.readFileSync("./package.json", "utf8")).version;
-}
