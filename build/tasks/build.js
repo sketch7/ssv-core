@@ -7,17 +7,18 @@ const ssvTools = require("@ssv/tools");
 const args = require("../args");
 const config = require("../config");
 
-gulp.task("build", (cb) => {
+gulp.task("hello", () => { console.log("test gulp");});
+
+gulp.task("build", () => {
+	console.log("gulp :: build");
 	if (args.isRelease) {
-		return runSeq(
+		 return gulp.series(
 			["lint", "compile:ts"],
 			"copy-dist",
-			"bundle:ts",
-			cb);
+			"bundle:ts");
 	}
-	return runSeq(
-		["lint", "compile:ts:dev"],
-		cb);
+	return gulp.series(
+		["lint", "compile:ts:dev"]);
 });
 
 gulp.task("rebuild", (cb) => {
