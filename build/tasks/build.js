@@ -1,5 +1,4 @@
 const gulp = require("gulp");
-const runSeq = require("run-sequence");
 const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 const ssvTools = require("@ssv/tools");
@@ -7,39 +6,30 @@ const ssvTools = require("@ssv/tools");
 const args = require("../args");
 const config = require("../config");
 
-gulp.task("hello", () => { console.log("test gulp");});
+require("./clean");
+require("./lint");
 
-gulp.task("build", () => {
-	console.log("gulp :: build");
-	if (args.isRelease) {
-		 return gulp.series(
-			["lint", "compile:ts"],
-			"copy-dist",
-			"bundle:ts");
-	}
-	return gulp.series(
-		["lint", "compile:ts:dev"]);
+ssvTools.registerGulpMultiTargetBuilds({
+	taskName: "ts",
+	action: compileTs,
+	config: config
 });
 
-gulp.task("rebuild", (cb) => {
-	if (args.isRelease) {
-		return runSeq(
-			"clean",
-			"build",
-			cb);
-	}
-	return runSeq(
-		"clean:artifact",
-		"build",
-		cb);
-});
+gulp.task("build", args.isRelease
+	? gulp.series(
+		gulp.parallel("lint", "compile:ts"),
+		"copy-dist",
+		"bundle:ts"
+	)
+	: gulp.series("lint", "compile:ts:dev")
+)
 
-gulp.task("ci", (cb) => {
-	return runSeq(
-		"rebuild",
-		"compile:test",
-		cb);
-});
+gulp.task("rebuild", args.isRelease
+	? gulp.series("clean", "build")
+	: gulp.series("clean:artifact", "build")
+)
+
+gulp.task("ci", gulp.series("rebuild", "compile:test"));
 
 // scripts - compile:ts | compile:ts:dev | compile:ts:TARGET
 function compileTs(target) {
@@ -67,11 +57,7 @@ function compileTs(target) {
 	// 		.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	// ]);
 }
-ssvTools.registerGulpMultiTargetBuilds({
-	taskName: "ts",
-	action: compileTs,
-	config: config
-});
+
 
 gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
 
