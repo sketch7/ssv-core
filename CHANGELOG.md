@@ -1,3 +1,12 @@
+<a name="0.4.1"></a>
+## [0.4.1](https://github.com/sketch7/ssv-core/compare/0.4.0...0.4.1) (2018-10-25)
+
+
+### Docs
+
+* **readme:** update readme links + title and description
+
+
 <a name="0.4.0"></a>
 ## [0.4.0](https://github.com/sketch7/ssv-core/compare/0.3.22...0.4.0) (2018-10-24)
 
