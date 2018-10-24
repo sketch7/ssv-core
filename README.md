@@ -5,11 +5,11 @@
 
 [npm]: https://www.npmjs.com
 
-# ssv-core
+# @ssv/core
 [![CircleCI](https://circleci.com/gh/sketch7/ssv-core.svg?style=shield)](https://circleci.com/gh/sketch7/ssv-core)
-[![npm version](https://badge.fury.io/js/ssv-core.svg)](https://badge.fury.io/js/ssv-core)
+[![npm version](https://badge.fury.io/js/%40ssv%2Fcore.svg)](https://badge.fury.io/js/%40ssv%2Fcore)
 
-ssv core components, utilities and services
+Core utilities, components and services for browser and node.
 
 **Quick links**
 
