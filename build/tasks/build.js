@@ -15,6 +15,13 @@ ssvTools.registerGulpMultiTargetBuilds({
 	config: config
 });
 
+gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
+
+gulp.task("copy-dist", () => {
+	return gulp.src(`${config.output.artifact}/**/*`)
+		.pipe(gulp.dest(`${config.output.dist}`));
+});
+
 gulp.task("build", args.isRelease
 	? gulp.series(
 		gulp.parallel("lint", "compile:ts"),
@@ -57,11 +64,3 @@ function compileTs(target) {
 	// 		.pipe(gulp.dest(`${config.output.artifact}/typings`))
 	// ]);
 }
-
-
-gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
-
-gulp.task("copy-dist", () => {
-	return gulp.src(`${config.output.artifact}/**/*`)
-		.pipe(gulp.dest(`${config.output.dist}`));
-});

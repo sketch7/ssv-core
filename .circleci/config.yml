@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /app
     docker:
-      - image: node:8.6.0
+      - image: circleci/node:10.4
     steps:
       - run:
           name: Print environment versions
