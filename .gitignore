@@ -5,3 +5,4 @@ node_modules
 
 _artifact
 dist
+.rpt2_cache
