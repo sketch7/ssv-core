@@ -16,6 +16,7 @@ ssvTools.registerGulpMultiTargetBuilds({
 });
 
 gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError }));
+gulp.task("prepublish", () => ssvTools.prepublish());
 
 gulp.task("copy-dist", () => {
 	return gulp.src(`${config.output.artifact}/**/*`)
@@ -26,6 +27,7 @@ gulp.task("build", args.isRelease
 	? gulp.series(
 		gulp.parallel("lint", "compile:ts"),
 		"copy-dist",
+		"prepublish",
 		"bundle:ts"
 	)
 	: gulp.series("lint", "compile:ts:dev")
