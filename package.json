@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@ssv/tools": "^0.7.5",
-    "@speedy/build-tools": "^0.8.1",
     "@types/jest": "^23.3.7",
     "@types/lodash": "^4.14.117",
     "del": "^3.0.0",
@@ -37,8 +36,6 @@
     "gulp-bump": "^3.1.1",
     "gulp-conventional-changelog": "^2.0.3",
     "gulp-git": "^2.8.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sourcemaps": "^2.6.4",
     "gulp-util": "^3.0.8",
     "jest": "^23.6.0",
     "jest-environment-node-debug": "^2.0.0",
