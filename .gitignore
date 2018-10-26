@@ -5,3 +5,5 @@ node_modules
 
 _artifact
 dist
+.rpt2_*
+.rts2_* 

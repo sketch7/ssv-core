@@ -1,10 +1,24 @@
+<a name="0.5.0"></a>
+## [0.5.0](https://github.com/sketch7/ssv-core/compare/0.4.1...0.5.0) (2018-10-27)
+
+
+### Bug Fixes
+
+* **string:** `replaceAll` wasn't working when passing `\\`
+* **enum:** lodash import was change as it was causing issues when used
+
+### Chore
+
+* **output:** files output has been changed
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/sketch7/ssv-core/compare/0.4.1...0.4.2) (2018-10-26)
 
 
 ### Chore
 
-* **Chore:** removed unused libraries
+* **deps:** removed unused libraries
 
 
 <a name="0.4.1"></a>
