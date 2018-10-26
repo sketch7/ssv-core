@@ -1,4 +1,4 @@
-﻿import { kebabCase } from "lodash";
+﻿import _ from "lodash";
 
 /**
  * Typing constraint for Enums (non `const`).
@@ -22,7 +22,7 @@ export function getNames(e: Enum): string[] {
  * @returns enum definition names as a string array with kebab case e.g. `["elite", "boss", "normal", "raid-boss"]`.
  */
 export function getNamesKebab(e: Enum): string[] {
-	return Object.keys(e).filter(v => isNaN(parseInt(v, 10))).map(kebabCase);
+	return Object.keys(e).filter(v => isNaN(parseInt(v, 10))).map(_.kebabCase);
 }
 
 /**
