@@ -61,5 +61,5 @@ export function parseBool(value: string | boolean | number | null | undefined) {
  * @returns {string} Returns string with the replaced values
  */
 export function replaceAll(value: string, search: string, replacement: string): string {
-	return value.replace(new RegExp(search, "g"), replacement);
+	return value.replace(new RegExp(`\\${search}`, "g"), replacement);
 }

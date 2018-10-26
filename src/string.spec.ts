@@ -109,6 +109,13 @@ describe("String Utils", () => {
 					expect(result).toBe("/hello/xxx/yyy");
 				});
 			});
+
+			describe("when search string is forward slash", () => {
+				it("should replace correctly", () => {
+					const result = SUT.replaceAll("bundle\\ssv-core.umd.js", "\\", "/");
+					expect(result).toBe("bundle/ssv-core.umd.js");
+				});
+			});
 		});
 
 	});
