@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const conventionalChangelog = require("gulp-conventional-changelog");
 const bump = require("gulp-bump");
+const ssvTools = require("@ssv/tools");
 
 const args = require("../args");
 
@@ -24,3 +25,5 @@ gulp.task("prepare-release", cb => {
 		"bump-version",
 		"changelog")(cb);
 });
+
+gulp.task("prepublish", () => ssvTools.prepublish());

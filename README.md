@@ -18,6 +18,7 @@ Core utilities, components and services for browser and node.
 ## Installation
 
 Get library via [npm]
+
 ```bash
 npm install @ssv/core --save
 ```
@@ -48,12 +49,6 @@ npm install -g git gulp devtool
 ```
 
 
-#### Cloning Repo
-
-- Run `git clone https://github.com/sketch7/ssv-core.git`
-- Switch to `develop` branch
-
-
 ### Project Setup
 The following process need to be executed in order to get started.
 
@@ -64,38 +59,28 @@ npm install
 
 ### Building the code
 
-```
-gulp build
-// or
+```bash
 npm run build
 ```
-In order to view all other tasks invoke `gulp` or check the gulp tasks directly.
 
 ### Running the tests
 
-```
-gulp test
-// or
+```bash
 npm test
 ```
 
-
-### Development utils
-
-#### Trigger gulp watch
+#### Watch
 Handles compiling of changes.
-```
-gulp watch
-// or
+
+```bash
 npm start
 ```
 
 
 #### Running Continuous Tests
 Spawns test runner and keep watching for changes.
-```
-gulp tdd
-// or
+
+```bash
 npm run tdd
 ```
 
