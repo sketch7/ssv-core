@@ -26,7 +26,7 @@ npm install @ssv/core --save
 ## Usage
 
 ```ts
-import { string } from "ssv-core";
+import { string } from "@ssv/core";
 
 let name = string.interpolate("name=:name", { name: "Chiko" });
 ```
