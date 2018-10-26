@@ -1,6 +1,4 @@
 const gulp = require("gulp");
-const sourcemaps = require("gulp-sourcemaps");
-const plumber = require("gulp-plumber");
 const ssvTools = require("@ssv/tools");
 
 const args = require("../args");
