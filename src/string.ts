@@ -60,6 +60,6 @@ export function parseBool(value: string | boolean | number | null | undefined) {
  * @param {string} replacement value to replace with e.g. "/"
  * @returns {string} Returns string with the replaced values
  */
-export function replaceAll(value: string, search: string, replacement: string): string {
-	return value.replace(new RegExp(`\\${search}`, "g"), replacement);
+export function replaceAll(value: string, search: string | RegExp, replacement: string): string {
+	return value.replace(new RegExp(`${search}`, "g"), replacement);
 }

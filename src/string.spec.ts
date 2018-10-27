@@ -97,9 +97,14 @@ describe("String Utils", () => {
 			});
 
 			describe("when having multiple match occurrences", () => {
-				it("should replace all values", () => {
+				it("should replace all backslash values", () => {
 					const result = SUT.replaceAll("//hello/xxx//yyy", "//", "/");
 					expect(result).toBe("/hello/xxx/yyy");
+				});
+
+				it("should replace all text occurrences", () => {
+					const result = SUT.replaceAll("cat dog cat dog dog cat cat", "cat", "dog");
+					expect(result).toBe("dog dog dog dog dog dog dog");
 				});
 			});
 
@@ -112,8 +117,15 @@ describe("String Utils", () => {
 
 			describe("when search string is forward slash", () => {
 				it("should replace correctly", () => {
-					const result = SUT.replaceAll("bundle\\ssv-core.umd.js", "\\", "/");
+					const result = SUT.replaceAll("bundle\\ssv-core.umd.js", "\\\\", "/");
 					expect(result).toBe("bundle/ssv-core.umd.js");
+				});
+			});
+
+			describe("when search string is forward slash", () => {
+				it("should replace correctly", () => {
+					const result = SUT.replaceAll(`const VERSION = "0.0.0-PLACEHOLDER";`, "0.0.0-PLACEHOLDER", "1.0.0-rc.1");
+					expect(result).toBe(`const VERSION = "1.0.0-rc.1";`);
 				});
 			});
 		});
