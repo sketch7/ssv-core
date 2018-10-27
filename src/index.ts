@@ -7,6 +7,7 @@ import * as string from "./string";
 import * as object from "./object";
 
 export * from "./keycode";
+export { VERSION } from "./version";
 
 export {
 	collection,
@@ -17,5 +18,5 @@ export {
 	object,
 
 	Dictionary,
-	Selectable
+	Selectable,
 };

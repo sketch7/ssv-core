@@ -6,7 +6,6 @@ const config = require("../config");
 
 require("./clean");
 require("./lint");
-require("./prepare-release");
 
 ssvTools.registerGulpMultiTargetBuilds({
 	taskName: "ts",
@@ -15,13 +14,18 @@ ssvTools.registerGulpMultiTargetBuilds({
 });
 
 gulp.task("bundle:ts", () => ssvTools.rollup({ continueOnError: args.continueOnError, useTypeScriptConfig: true }));
+gulp.task("build:resources", () => ssvTools.buildResources(config.output.dist));
+gulp.task("prebuild:rel", () => ssvTools.prepareReleaseBuild({
+	shouldSkip: !process.env.CI
+}));
 
 gulp.task("build", args.isRelease
 	? gulp.series(
-		gulp.parallel("lint", "compile:ts", "prepublish"),
+		"prebuild:rel",
+		gulp.parallel("lint", "compile:ts", "build:resources"),
 		"bundle:ts"
 	)
-	: gulp.parallel("lint", "prepublish", "compile:ts:dev")
+	: gulp.parallel("lint", "build:resources", "compile:ts:dev")
 )
 
 gulp.task("rebuild", gulp.series("clean", "build"))
