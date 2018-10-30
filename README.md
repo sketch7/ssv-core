@@ -87,7 +87,8 @@ npm run tdd
 
 ### Preparation for Release
 
-```
-npm run prepare-release -- --bump major|minor|patch|prerelease (default: patch)
-```
+- Update changelogs
+- bump version
+
+
 Check out the [release workflow guide][releaseWorkflowWiki] in order to guide you creating a release and publishing it.

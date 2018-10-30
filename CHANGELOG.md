@@ -1,3 +1,15 @@
+## [0.6.0](https://github.com/sketch7/ssv-core/compare/0.5.1...0.6.0) (2018-10-30)
+
+### Features
+
+- **build:** change build output - no features were added
+
+
+### Features
+
+* **string:** `replaceAll` wasn't working when passing `\\`
+
+
 <a name="0.5.0"></a>
 ## [0.5.0](https://github.com/sketch7/ssv-core/compare/0.4.1...0.5.0) (2018-10-27)
 
