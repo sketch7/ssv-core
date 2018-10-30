@@ -30,7 +30,7 @@
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "@ssv/tools": "^0.8.0",
+    "@ssv/tools": "^0.8.1",
     "@types/jest": "^23.3.7",
     "@types/lodash": "^4.14.117",
     "del": "^3.0.0",
