@@ -1,6 +1,6 @@
 {
   "name": "@ssv/core",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Core utilities, components and services for browser and node",
   "keywords": [
     "sketch7",
@@ -8,7 +8,7 @@
     "utils"
   ],
   "scripts": {
-    "start": "gulp watch",
+    "start": "microbundle watch",
     "build": "gulp build",
     "clean": "gulp clean",
     "lint": "gulp lint",
@@ -20,15 +20,17 @@
   },
   "author": "Stephen Lautier <stephen.lautier@outlook.com>, Clayton Lautier <clayton.lautier@outlook.com>",
   "license": "MIT",
-  "main": "dist/bundles/ssv-core.umd.js",
-  "module": "dist/es2015/index.js",
-  "typings": "dist/es2015/index.d.ts",
+  "main": "dist/ssv-core.js",
+  "umd:main": "dist/ssv-core.umd.js",
+  "module": "dist/ssv-core.mjs",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/sketch7/ssv-core"
   },
   "devDependencies": {
-    "@ssv/tools": "^0.8.0",
+    "@ssv/tools": "^0.8.1",
     "@types/jest": "^23.3.7",
     "@types/lodash": "^4.14.117",
     "del": "^3.0.0",
@@ -40,6 +42,7 @@
     "jest": "^23.6.0",
     "jest-environment-node-debug": "^2.0.0",
     "lodash": "^4.17.11",
+    "microbundle": "^0.7.0",
     "require-dir": "^1.1.0",
     "ts-jest": "^23.10.4",
     "typescript": "^3.1.3",
