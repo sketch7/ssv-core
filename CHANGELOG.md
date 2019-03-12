@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/sketch7/ssv-core/compare/0.6.0...0.6.1) (2019-03-13)
+
+### Features
+
+- **datetime:** add more time conversions hours and days (not in all combinations)
+
+
 ## [0.6.0](https://github.com/sketch7/ssv-core/compare/0.5.1...0.6.0) (2018-10-30)
 
 ### Features

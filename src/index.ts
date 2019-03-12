@@ -1,6 +1,7 @@
 ﻿import { Dictionary, Selectable } from "./collection";
 import * as collection from "./collection";
 import * as dateTime from "./date-time";
+export { TimeUnits } from "./date-time";
 import * as enumUtil from "./enum";
 import * as math from "./math";
 import * as string from "./string";

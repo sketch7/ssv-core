@@ -81,6 +81,16 @@ describe("DateTime Utils", () => {
 				const result = SUT.convertTime(72000, TimeUnits.Milliseconds, TimeUnits.Minutes);
 				expect(result).toBe(1.2);
 			});
+
+			it("should be converted to hours", () => {
+				const result = SUT.convertTime(3.6e+6, TimeUnits.Milliseconds, TimeUnits.Hours);
+				expect(result).toBe(1);
+			});
+
+			it("should be converted to days", () => {
+				const result = SUT.convertTime(8.64e+7, TimeUnits.Milliseconds, TimeUnits.Days);
+				expect(result).toBe(1);
+			});
 		});
 
 		describe("given time in seconds", () => {
@@ -104,6 +114,30 @@ describe("DateTime Utils", () => {
 			it("should be converted to seconds", () => {
 				const result = SUT.convertTime(1.25, TimeUnits.Minutes, TimeUnits.Seconds);
 				expect(result).toBe(75);
+			});
+		});
+
+		describe("given time in hours", () => {
+			it("should be converted to milliseconds", () => {
+				const result = SUT.convertTime(1, TimeUnits.Hours, TimeUnits.Milliseconds);
+				expect(result).toBe(3.6e+6);
+			});
+
+			it("should be converted to seconds", () => {
+				const result = SUT.convertTime(1, TimeUnits.Hours, TimeUnits.Seconds);
+				expect(result).toBe(3600);
+			});
+		});
+
+		describe("given time in days", () => {
+			it("should be converted to milliseconds", () => {
+				const result = SUT.convertTime(1, TimeUnits.Days, TimeUnits.Milliseconds);
+				expect(result).toBe(8.64e+7);
+			});
+
+			it("should be converted to seconds", () => {
+				const result = SUT.convertTime(1, TimeUnits.Days, TimeUnits.Seconds);
+				expect(result).toBe(86400);
 			});
 		});
 
